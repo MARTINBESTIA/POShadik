@@ -7,4 +7,7 @@ add_executable(semestralka src/main.c
         src/shared/gameConfiguration.c
         src/shared/gameConfiguration.h
         src/server/gameField.h
-        src/server/gameField.c)
+        src/server/gameField.c
+        src/client/clientMain.c
+        src/server/gameFieldGenerator.h
+        src/server/gameFieldGenerator.c)

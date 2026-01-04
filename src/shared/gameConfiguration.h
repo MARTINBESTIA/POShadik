@@ -15,4 +15,6 @@ typedef struct GameConfiguration {
     char* customFieldPath; // if gameField is 'C'
 } game_conf_t;
 
+void fillGameConfiguration(game_conf_t* config);
+
 #endif //SEMESTRALKA_GAMECONFIGURATION_H

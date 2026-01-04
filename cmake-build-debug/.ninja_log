@@ -1,0 +1,6 @@
+# ninja log v6
+172	1168	7892329358276493	CMakeFiles/semestralka.dir/src/client/clientMain.c.obj	bb332c03a0b7e006
+184	1174	7892329358406349	CMakeFiles/semestralka.dir/src/server/gameFieldGenerator.c.obj	bc413a2232091e00
+141	1176	7892329357971250	CMakeFiles/semestralka.dir/src/shared/gameConfiguration.c.obj	23b62a6c1b66f93f
+160	1181	7892329358156289	CMakeFiles/semestralka.dir/src/server/gameField.c.obj	c21a5fbc40d44680
+99	1183	7892329357554732	CMakeFiles/semestralka.dir/src/main.c.obj	7b4ba2f9b59b556f

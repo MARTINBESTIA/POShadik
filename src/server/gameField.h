@@ -16,9 +16,13 @@ typedef struct snakePosition {
     int length;
 } snake_position_t;
 
-typedef struct obstaclesPosition {
+typedef struct field {
     position_t** positions;
-    int length;
-} obstacles_position_t;
+    int fieldLengthX;
+    int fieldLengthY;
+} field_t;
+
+void spawnFruit(field_t *gameField);
+int moveSnake(field_t *gameField, snake_position_t *snakePosition, char direction);
 
 #endif //SEMESTRALKA_GAMEFIELD_H

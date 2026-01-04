@@ -63,12 +63,26 @@ build CMakeFiles/semestralka.dir/src/shared/gameConfiguration.c.obj: C_COMPILER_
   OBJECT_DIR = CMakeFiles\semestralka.dir
   OBJECT_FILE_DIR = CMakeFiles\semestralka.dir\src\shared
 
-build CMakeFiles/semestralka.dir/src/shared/gameField.c.obj: C_COMPILER__semestralka_unscanned_Debug C$:/Users/marti/Desktop/škola/3.$ ročník/POS/semestralka/src/shared/gameField.c || cmake_object_order_depends_target_semestralka
+build CMakeFiles/semestralka.dir/src/server/gameField.c.obj: C_COMPILER__semestralka_unscanned_Debug C$:/Users/marti/Desktop/škola/3.$ ročník/POS/semestralka/src/server/gameField.c || cmake_object_order_depends_target_semestralka
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\semestralka.dir\src\shared\gameField.c.obj.d
+  DEP_FILE = CMakeFiles\semestralka.dir\src\server\gameField.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\semestralka.dir
-  OBJECT_FILE_DIR = CMakeFiles\semestralka.dir\src\shared
+  OBJECT_FILE_DIR = CMakeFiles\semestralka.dir\src\server
+
+build CMakeFiles/semestralka.dir/src/client/clientMain.c.obj: C_COMPILER__semestralka_unscanned_Debug C$:/Users/marti/Desktop/škola/3.$ ročník/POS/semestralka/src/client/clientMain.c || cmake_object_order_depends_target_semestralka
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\semestralka.dir\src\client\clientMain.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\semestralka.dir
+  OBJECT_FILE_DIR = CMakeFiles\semestralka.dir\src\client
+
+build CMakeFiles/semestralka.dir/src/server/gameFieldGenerator.c.obj: C_COMPILER__semestralka_unscanned_Debug C$:/Users/marti/Desktop/škola/3.$ ročník/POS/semestralka/src/server/gameFieldGenerator.c || cmake_object_order_depends_target_semestralka
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\semestralka.dir\src\server\gameFieldGenerator.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\semestralka.dir
+  OBJECT_FILE_DIR = CMakeFiles\semestralka.dir\src\server
 
 
 # =============================================================================
@@ -78,7 +92,7 @@ build CMakeFiles/semestralka.dir/src/shared/gameField.c.obj: C_COMPILER__semestr
 #############################################
 # Link the executable semestralka.exe
 
-build semestralka.exe: C_EXECUTABLE_LINKER__semestralka_Debug CMakeFiles/semestralka.dir/src/main.c.obj CMakeFiles/semestralka.dir/src/shared/gameConfiguration.c.obj CMakeFiles/semestralka.dir/src/shared/gameField.c.obj
+build semestralka.exe: C_EXECUTABLE_LINKER__semestralka_Debug CMakeFiles/semestralka.dir/src/main.c.obj CMakeFiles/semestralka.dir/src/shared/gameConfiguration.c.obj CMakeFiles/semestralka.dir/src/server/gameField.c.obj CMakeFiles/semestralka.dir/src/client/clientMain.c.obj CMakeFiles/semestralka.dir/src/server/gameFieldGenerator.c.obj
   CONFIG = Debug
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
