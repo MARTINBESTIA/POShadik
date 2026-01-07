@@ -14,7 +14,6 @@ add_executable(server
         src/shared/gameConfiguration.h
         src/server/gameField.h
         src/server/gameField.c
-        src/server/serverMain.c
         src/shared/gameFieldGenerator.h
         src/shared/gameFieldGenerator.c
         src/server/serverMain.c)

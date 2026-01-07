@@ -44,7 +44,7 @@ int main(void) {
             return 5;
         }
         close(pipe_fd[read_end]);
-        if (execl("../server/server", "server", (char*)NULL) < 0) {
+        if (execl("./server", "server", (char*)NULL) < 0) {
             perror("execl");
             return 6;
         }
