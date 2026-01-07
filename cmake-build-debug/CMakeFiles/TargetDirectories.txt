@@ -1,3 +1,4 @@
-C:/Users/marti/Desktop/škola/3. ročník/POS/semestralka/cmake-build-debug/CMakeFiles/semestralka.dir
-C:/Users/marti/Desktop/škola/3. ročník/POS/semestralka/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/marti/Desktop/škola/3. ročník/POS/semestralka/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/cmake-build-debug/CMakeFiles/client.dir
+/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/cmake-build-debug/CMakeFiles/server.dir
+/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/cmake-build-debug/CMakeFiles/rebuild_cache.dir

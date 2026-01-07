@@ -1,0 +1,1 @@
+/usr/bin/cc -g CMakeFiles/server.dir/src/server/gameField.c.o CMakeFiles/server.dir/src/server/serverMain.c.o CMakeFiles/server.dir/src/shared/gameFieldGenerator.c.o -o server

@@ -41,67 +41,116 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = C$:/Users/marti/Desktop/škola/3.$ ročník/POS/semestralka/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target semestralka
+# Object build statements for EXECUTABLE target client
 
 
 #############################################
-# Order-only phony target for semestralka
+# Order-only phony target for client
 
-build cmake_object_order_depends_target_semestralka: phony || .
+build cmake_object_order_depends_target_client: phony || .
 
-build CMakeFiles/semestralka.dir/src/main.c.obj: C_COMPILER__semestralka_unscanned_Debug C$:/Users/marti/Desktop/škola/3.$ ročník/POS/semestralka/src/main.c || cmake_object_order_depends_target_semestralka
+build CMakeFiles/client.dir/src/shared/gameConfiguration.c.obj: C_COMPILER__client_unscanned_Debug C$:/Users/marti/Desktop/škola/3.$ ročník/POS/semestralka/src/shared/gameConfiguration.c || cmake_object_order_depends_target_client
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\semestralka.dir\src\main.c.obj.d
+  DEP_FILE = CMakeFiles\client.dir\src\shared\gameConfiguration.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\semestralka.dir
-  OBJECT_FILE_DIR = CMakeFiles\semestralka.dir\src
+  OBJECT_DIR = CMakeFiles\client.dir
+  OBJECT_FILE_DIR = CMakeFiles\client.dir\src\shared
 
-build CMakeFiles/semestralka.dir/src/shared/gameConfiguration.c.obj: C_COMPILER__semestralka_unscanned_Debug C$:/Users/marti/Desktop/škola/3.$ ročník/POS/semestralka/src/shared/gameConfiguration.c || cmake_object_order_depends_target_semestralka
+build CMakeFiles/client.dir/src/server/gameField.c.obj: C_COMPILER__client_unscanned_Debug C$:/Users/marti/Desktop/škola/3.$ ročník/POS/semestralka/src/server/gameField.c || cmake_object_order_depends_target_client
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\semestralka.dir\src\shared\gameConfiguration.c.obj.d
+  DEP_FILE = CMakeFiles\client.dir\src\server\gameField.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\semestralka.dir
-  OBJECT_FILE_DIR = CMakeFiles\semestralka.dir\src\shared
+  OBJECT_DIR = CMakeFiles\client.dir
+  OBJECT_FILE_DIR = CMakeFiles\client.dir\src\server
 
-build CMakeFiles/semestralka.dir/src/server/gameField.c.obj: C_COMPILER__semestralka_unscanned_Debug C$:/Users/marti/Desktop/škola/3.$ ročník/POS/semestralka/src/server/gameField.c || cmake_object_order_depends_target_semestralka
+build CMakeFiles/client.dir/src/client/clientMain.c.obj: C_COMPILER__client_unscanned_Debug C$:/Users/marti/Desktop/škola/3.$ ročník/POS/semestralka/src/client/clientMain.c || cmake_object_order_depends_target_client
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\semestralka.dir\src\server\gameField.c.obj.d
+  DEP_FILE = CMakeFiles\client.dir\src\client\clientMain.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\semestralka.dir
-  OBJECT_FILE_DIR = CMakeFiles\semestralka.dir\src\server
+  OBJECT_DIR = CMakeFiles\client.dir
+  OBJECT_FILE_DIR = CMakeFiles\client.dir\src\client
 
-build CMakeFiles/semestralka.dir/src/client/clientMain.c.obj: C_COMPILER__semestralka_unscanned_Debug C$:/Users/marti/Desktop/škola/3.$ ročník/POS/semestralka/src/client/clientMain.c || cmake_object_order_depends_target_semestralka
+build CMakeFiles/client.dir/src/server/gameFieldGenerator.c.obj: C_COMPILER__client_unscanned_Debug C$:/Users/marti/Desktop/škola/3.$ ročník/POS/semestralka/src/server/gameFieldGenerator.c || cmake_object_order_depends_target_client
   CONFIG = Debug
-  DEP_FILE = CMakeFiles\semestralka.dir\src\client\clientMain.c.obj.d
+  DEP_FILE = CMakeFiles\client.dir\src\server\gameFieldGenerator.c.obj.d
   FLAGS = -g -std=gnu11 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\semestralka.dir
-  OBJECT_FILE_DIR = CMakeFiles\semestralka.dir\src\client
-
-build CMakeFiles/semestralka.dir/src/server/gameFieldGenerator.c.obj: C_COMPILER__semestralka_unscanned_Debug C$:/Users/marti/Desktop/škola/3.$ ročník/POS/semestralka/src/server/gameFieldGenerator.c || cmake_object_order_depends_target_semestralka
-  CONFIG = Debug
-  DEP_FILE = CMakeFiles\semestralka.dir\src\server\gameFieldGenerator.c.obj.d
-  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\semestralka.dir
-  OBJECT_FILE_DIR = CMakeFiles\semestralka.dir\src\server
+  OBJECT_DIR = CMakeFiles\client.dir
+  OBJECT_FILE_DIR = CMakeFiles\client.dir\src\server
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target semestralka
+# Link build statements for EXECUTABLE target client
 
 
 #############################################
-# Link the executable semestralka.exe
+# Link the executable client.exe
 
-build semestralka.exe: C_EXECUTABLE_LINKER__semestralka_Debug CMakeFiles/semestralka.dir/src/main.c.obj CMakeFiles/semestralka.dir/src/shared/gameConfiguration.c.obj CMakeFiles/semestralka.dir/src/server/gameField.c.obj CMakeFiles/semestralka.dir/src/client/clientMain.c.obj CMakeFiles/semestralka.dir/src/server/gameFieldGenerator.c.obj
+build client.exe: C_EXECUTABLE_LINKER__client_Debug CMakeFiles/client.dir/src/shared/gameConfiguration.c.obj CMakeFiles/client.dir/src/server/gameField.c.obj CMakeFiles/client.dir/src/client/clientMain.c.obj CMakeFiles/client.dir/src/server/gameFieldGenerator.c.obj
   CONFIG = Debug
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\semestralka.dir
+  OBJECT_DIR = CMakeFiles\client.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = semestralka.exe
-  TARGET_IMPLIB = libsemestralka.dll.a
-  TARGET_PDB = semestralka.exe.dbg
+  TARGET_FILE = client.exe
+  TARGET_IMPLIB = libclient.dll.a
+  TARGET_PDB = client.exe.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target server
+
+
+#############################################
+# Order-only phony target for server
+
+build cmake_object_order_depends_target_server: phony || .
+
+build CMakeFiles/server.dir/src/shared/gameConfiguration.c.obj: C_COMPILER__server_unscanned_Debug C$:/Users/marti/Desktop/škola/3.$ ročník/POS/semestralka/src/shared/gameConfiguration.c || cmake_object_order_depends_target_server
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\server.dir\src\shared\gameConfiguration.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\server.dir
+  OBJECT_FILE_DIR = CMakeFiles\server.dir\src\shared
+
+build CMakeFiles/server.dir/src/server/gameField.c.obj: C_COMPILER__server_unscanned_Debug C$:/Users/marti/Desktop/škola/3.$ ročník/POS/semestralka/src/server/gameField.c || cmake_object_order_depends_target_server
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\server.dir\src\server\gameField.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\server.dir
+  OBJECT_FILE_DIR = CMakeFiles\server.dir\src\server
+
+build CMakeFiles/server.dir/src/server/serverMain.c.obj: C_COMPILER__server_unscanned_Debug C$:/Users/marti/Desktop/škola/3.$ ročník/POS/semestralka/src/server/serverMain.c || cmake_object_order_depends_target_server
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\server.dir\src\server\serverMain.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\server.dir
+  OBJECT_FILE_DIR = CMakeFiles\server.dir\src\server
+
+build CMakeFiles/server.dir/src/server/gameFieldGenerator.c.obj: C_COMPILER__server_unscanned_Debug C$:/Users/marti/Desktop/škola/3.$ ročník/POS/semestralka/src/server/gameFieldGenerator.c || cmake_object_order_depends_target_server
+  CONFIG = Debug
+  DEP_FILE = CMakeFiles\server.dir\src\server\gameFieldGenerator.c.obj.d
+  FLAGS = -g -std=gnu11 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\server.dir
+  OBJECT_FILE_DIR = CMakeFiles\server.dir\src\server
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target server
+
+
+#############################################
+# Link the executable server.exe
+
+build server.exe: C_EXECUTABLE_LINKER__server_Debug CMakeFiles/server.dir/src/shared/gameConfiguration.c.obj CMakeFiles/server.dir/src/server/gameField.c.obj CMakeFiles/server.dir/src/server/serverMain.c.obj CMakeFiles/server.dir/src/server/gameFieldGenerator.c.obj
+  CONFIG = Debug
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\server.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = server.exe
+  TARGET_IMPLIB = libserver.dll.a
+  TARGET_PDB = server.exe.dbg
 
 
 #############################################
@@ -129,7 +178,9 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build semestralka: phony semestralka.exe
+build client: phony client.exe
+
+build server: phony server.exe
 
 # =============================================================================
 # Folder targets.
@@ -146,7 +197,7 @@ build codegen: phony
 #############################################
 # Folder: C:/Users/marti/Desktop/škola/3. ročník/POS/semestralka/cmake-build-debug
 
-build all: phony semestralka.exe
+build all: phony client.exe server.exe
 
 # =============================================================================
 # Built-in targets

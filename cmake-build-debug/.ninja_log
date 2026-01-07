@@ -1,6 +1,14 @@
 # ninja log v6
-172	1168	7892329358276493	CMakeFiles/semestralka.dir/src/client/clientMain.c.obj	bb332c03a0b7e006
+54	577	7892422123627072	CMakeFiles/semestralka.dir/src/client/clientMain.c.obj	bb332c03a0b7e006
 184	1174	7892329358406349	CMakeFiles/semestralka.dir/src/server/gameFieldGenerator.c.obj	bc413a2232091e00
-141	1176	7892329357971250	CMakeFiles/semestralka.dir/src/shared/gameConfiguration.c.obj	23b62a6c1b66f93f
-160	1181	7892329358156289	CMakeFiles/semestralka.dir/src/server/gameField.c.obj	c21a5fbc40d44680
+578	823	7892422128872487	semestralka.exe	f617f2065a3517de
 99	1183	7892329357554732	CMakeFiles/semestralka.dir/src/main.c.obj	7b4ba2f9b59b556f
+141	1176	7892329357971250	CMakeFiles/semestralka.dir/src/shared/gameConfiguration.c.obj	23b62a6c1b66f93f
+8	1339	7892438878636430	C:/Users/marti/Desktop/škola/3. ročník/POS/semestralka/cmake-build-debug/cmake_install.cmake	b3b286b11ddfa33e
+160	1181	7892329358156289	CMakeFiles/semestralka.dir/src/server/gameField.c.obj	c21a5fbc40d44680
+8	1339	7892438878766416	build.ninja	b3b286b11ddfa33e
+4	157	7892440182674298	CMakeFiles/server.dir/src/shared/gameConfiguration.c.obj	c827c0efc807cf1f
+17	159	7892440182809179	CMakeFiles/server.dir/src/server/gameField.c.obj	35e0334751375ae0
+28	257	7892440182912317	CMakeFiles/server.dir/src/server/serverMain.c.obj	4970dedfc4131f6a
+39	345	7892440183025195	CMakeFiles/server.dir/src/server/gameFieldGenerator.c.obj	be74f15e27d8eb1e
+346	637	7892440186096793	server.exe	669007d89e3b75c8
