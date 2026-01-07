@@ -1,5 +1,5 @@
-CMakeFiles/server.dir/src/server/serverMain.c.o: \
- /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/server/serverMain.c \
+CMakeFiles/server.dir/src/shared/gameFieldGenerator.c.o: \
+ /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/shared/gameFieldGenerator.c \
  /usr/include/stdc-predef.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -47,14 +47,6 @@ CMakeFiles/server.dir/src/server/serverMain.c.o: \
  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/unistd.h \
- /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
- /usr/include/x86_64-linux-gnu/bits/environments.h \
- /usr/include/x86_64-linux-gnu/bits/confname.h \
- /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
- /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
- /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
- /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/server/../shared/gameConfiguration.h \
- /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/server/../shared/gameFieldGenerator.h \
- /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/server/../shared/gameConfiguration.h \
- /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/server/gameField.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/shared/gameFieldGenerator.h \
+ /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/shared/gameConfiguration.h
