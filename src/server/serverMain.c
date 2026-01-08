@@ -8,7 +8,6 @@
 #include <unistd.h>
 
 #include "../shared/gameConfiguration.h"
-#include "../shared/gameFieldGenerator.h"
 #include "gameField.h"
 
 int main(int argc, char** argv) {

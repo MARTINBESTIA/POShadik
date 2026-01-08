@@ -1,1 +1,1 @@
-/usr/bin/cc -g CMakeFiles/client.dir/src/shared/gameFieldGenerator.c.o CMakeFiles/client.dir/src/client/clientMain.c.o -o client
+/usr/bin/cc -g CMakeFiles/client.dir/src/shared/gameConfiguration.c.o CMakeFiles/client.dir/src/client/clientMain.c.o CMakeFiles/client.dir/src/client/inputManager.c.o CMakeFiles/client.dir/src/shared/clientServerInterface.c.o -o client

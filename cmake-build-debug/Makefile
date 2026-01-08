@@ -173,6 +173,30 @@ src/client/clientMain.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/clientMain.c.s
 .PHONY : src/client/clientMain.c.s
 
+src/client/inputManager.o: src/client/inputManager.c.o
+.PHONY : src/client/inputManager.o
+
+# target to build an object file
+src/client/inputManager.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/inputManager.c.o
+.PHONY : src/client/inputManager.c.o
+
+src/client/inputManager.i: src/client/inputManager.c.i
+.PHONY : src/client/inputManager.i
+
+# target to preprocess a source file
+src/client/inputManager.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/inputManager.c.i
+.PHONY : src/client/inputManager.c.i
+
+src/client/inputManager.s: src/client/inputManager.c.s
+.PHONY : src/client/inputManager.s
+
+# target to generate assembly for a file
+src/client/inputManager.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/inputManager.c.s
+.PHONY : src/client/inputManager.c.s
+
 src/server/gameField.o: src/server/gameField.c.o
 .PHONY : src/server/gameField.o
 
@@ -221,32 +245,59 @@ src/server/serverMain.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/serverMain.c.s
 .PHONY : src/server/serverMain.c.s
 
-src/shared/gameFieldGenerator.o: src/shared/gameFieldGenerator.c.o
-.PHONY : src/shared/gameFieldGenerator.o
+src/shared/clientServerInterface.o: src/shared/clientServerInterface.c.o
+.PHONY : src/shared/clientServerInterface.o
 
 # target to build an object file
-src/shared/gameFieldGenerator.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/shared/gameFieldGenerator.c.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/shared/gameFieldGenerator.c.o
-.PHONY : src/shared/gameFieldGenerator.c.o
+src/shared/clientServerInterface.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/shared/clientServerInterface.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/shared/clientServerInterface.c.o
+.PHONY : src/shared/clientServerInterface.c.o
 
-src/shared/gameFieldGenerator.i: src/shared/gameFieldGenerator.c.i
-.PHONY : src/shared/gameFieldGenerator.i
+src/shared/clientServerInterface.i: src/shared/clientServerInterface.c.i
+.PHONY : src/shared/clientServerInterface.i
 
 # target to preprocess a source file
-src/shared/gameFieldGenerator.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/shared/gameFieldGenerator.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/shared/gameFieldGenerator.c.i
-.PHONY : src/shared/gameFieldGenerator.c.i
+src/shared/clientServerInterface.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/shared/clientServerInterface.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/shared/clientServerInterface.c.i
+.PHONY : src/shared/clientServerInterface.c.i
 
-src/shared/gameFieldGenerator.s: src/shared/gameFieldGenerator.c.s
-.PHONY : src/shared/gameFieldGenerator.s
+src/shared/clientServerInterface.s: src/shared/clientServerInterface.c.s
+.PHONY : src/shared/clientServerInterface.s
 
 # target to generate assembly for a file
-src/shared/gameFieldGenerator.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/shared/gameFieldGenerator.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/shared/gameFieldGenerator.c.s
-.PHONY : src/shared/gameFieldGenerator.c.s
+src/shared/clientServerInterface.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/shared/clientServerInterface.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/shared/clientServerInterface.c.s
+.PHONY : src/shared/clientServerInterface.c.s
+
+src/shared/gameConfiguration.o: src/shared/gameConfiguration.c.o
+.PHONY : src/shared/gameConfiguration.o
+
+# target to build an object file
+src/shared/gameConfiguration.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/shared/gameConfiguration.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/shared/gameConfiguration.c.o
+.PHONY : src/shared/gameConfiguration.c.o
+
+src/shared/gameConfiguration.i: src/shared/gameConfiguration.c.i
+.PHONY : src/shared/gameConfiguration.i
+
+# target to preprocess a source file
+src/shared/gameConfiguration.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/shared/gameConfiguration.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/shared/gameConfiguration.c.i
+.PHONY : src/shared/gameConfiguration.c.i
+
+src/shared/gameConfiguration.s: src/shared/gameConfiguration.c.s
+.PHONY : src/shared/gameConfiguration.s
+
+# target to generate assembly for a file
+src/shared/gameConfiguration.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/shared/gameConfiguration.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/shared/gameConfiguration.c.s
+.PHONY : src/shared/gameConfiguration.c.s
 
 # Help Target
 help:
@@ -262,15 +313,21 @@ help:
 	@echo "... src/client/clientMain.o"
 	@echo "... src/client/clientMain.i"
 	@echo "... src/client/clientMain.s"
+	@echo "... src/client/inputManager.o"
+	@echo "... src/client/inputManager.i"
+	@echo "... src/client/inputManager.s"
 	@echo "... src/server/gameField.o"
 	@echo "... src/server/gameField.i"
 	@echo "... src/server/gameField.s"
 	@echo "... src/server/serverMain.o"
 	@echo "... src/server/serverMain.i"
 	@echo "... src/server/serverMain.s"
-	@echo "... src/shared/gameFieldGenerator.o"
-	@echo "... src/shared/gameFieldGenerator.i"
-	@echo "... src/shared/gameFieldGenerator.s"
+	@echo "... src/shared/clientServerInterface.o"
+	@echo "... src/shared/clientServerInterface.i"
+	@echo "... src/shared/clientServerInterface.s"
+	@echo "... src/shared/gameConfiguration.o"
+	@echo "... src/shared/gameConfiguration.i"
+	@echo "... src/shared/gameConfiguration.s"
 .PHONY : help
 
 

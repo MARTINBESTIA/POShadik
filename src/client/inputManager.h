@@ -1,0 +1,8 @@
+//
+// Created by marti on 8. 1. 2026.
+//
+
+#ifndef SEMESTRALKA_INPUTMANAGER_H
+#define SEMESTRALKA_INPUTMANAGER_H
+
+#endif //SEMESTRALKA_INPUTMANAGER_H

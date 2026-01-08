@@ -10,7 +10,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/server/gameField.c" "CMakeFiles/server.dir/src/server/gameField.c.o" "gcc" "CMakeFiles/server.dir/src/server/gameField.c.o.d"
   "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/server/serverMain.c" "CMakeFiles/server.dir/src/server/serverMain.c.o" "gcc" "CMakeFiles/server.dir/src/server/serverMain.c.o.d"
-  "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/shared/gameFieldGenerator.c" "CMakeFiles/server.dir/src/shared/gameFieldGenerator.c.o" "gcc" "CMakeFiles/server.dir/src/shared/gameFieldGenerator.c.o.d"
+  "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/shared/clientServerInterface.c" "CMakeFiles/server.dir/src/shared/clientServerInterface.c.o" "gcc" "CMakeFiles/server.dir/src/shared/clientServerInterface.c.o.d"
+  "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/shared/gameConfiguration.c" "CMakeFiles/server.dir/src/shared/gameConfiguration.c.o" "gcc" "CMakeFiles/server.dir/src/shared/gameConfiguration.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

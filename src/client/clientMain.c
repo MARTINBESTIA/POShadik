@@ -6,14 +6,18 @@
 #include <sys/types.h>
 #include <unistd.h>
 #include "../shared/gameConfiguration.h"
-#include "../shared/gameFieldGenerator.h"
+#include "../shared/clientServerInterface.h"
 
 
 int main(void) {
 
     game_conf_t game_conf;
+    shared_data_t sharedData;
 
+    sharedDataInit(&sharedData);
     fillGameConfiguration(&game_conf);
+
+    int shmid = shmget(SHM_KEY_CLIENT_SERVER, sizeof(struct shared_data), 0600|IPC_CREAT|IPC_EXCL);
 
     int pipe_fd[2];
 

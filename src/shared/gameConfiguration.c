@@ -5,7 +5,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "gameFieldGenerator.h"
 #include "gameConfiguration.h"
 
 void fillGameConfiguration(game_conf_t* config) {
