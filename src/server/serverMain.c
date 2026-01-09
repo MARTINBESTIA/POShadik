@@ -32,7 +32,7 @@ int main(int argc, char** argv) {
         perror("server shmget");
         exit(1);
     }
-
+    printf("server shmid %d\n", shmid);
     if (shmid < 0) {
         perror("server:");
         perror("shared memory segment creation failed:");
@@ -64,11 +64,15 @@ int main(int argc, char** argv) {
     printf("IsConnected %d\n", data->isConnected);
     printf("Snake direction %c\n", data->snakeDirection);
 
-    while (1) {
-        sleep(10);
-        printf("SERVEEER KUK\n");
-    }
+    printf("SERVER BEZII \n");
+    sleep(1);
+    printf("SERVER KONCI \n");
 
+    if(shmdt(addr) != 0)
+    {
+        perror("Failed to detach shared memory block:");
+        return 1;
+    }
 
     if(shmctl(shmid, IPC_RMID, NULL) != 0)
     {

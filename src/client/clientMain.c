@@ -14,12 +14,19 @@
 int main(void) {
 
     const key_t SHM_KEY_CLIENT_SERVER = 0x12345;
-
     int serverExists = 0;
-
-    if (shmget(SHM_KEY_CLIENT_SERVER, sizeof(shared_data_t), 0600|IPC_CREAT|IPC_EXCL) < 0) {
-        printf("server existuje");
-        serverExists = 1;
+    int shmid = shmget(SHM_KEY_CLIENT_SERVER, sizeof(shared_data_t), 0600|IPC_CREAT|IPC_EXCL);
+    if (shmid < 0) {
+        if (errno == EEXIST) {
+            // segment already exists -> server already running
+            serverExists = 1;
+            printf("server exists\n");
+        } else {
+            perror("shmget");
+            return 1;
+        }
+    } else {
+        shmctl(shmid, IPC_RMID, NULL);
     }
 
     if (!serverExists) {
@@ -29,12 +36,11 @@ int main(void) {
         }
     } else {
         fprintf(stderr, "main: server uz bezi!\n");
-        while (1) {
-            sleep(10);
-            printf("server bezi\n");
-        }
     }
 
+    printf("klient bezi\n");
+    sleep(10);
+    printf("klient dobezal\n");
 
     return 0;
 }

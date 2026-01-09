@@ -59,6 +59,7 @@ int initializeGame() {
         //client process
 
         int shmid = shmget(SHM_KEY_CLIENT_SERVER, sizeof(shared_data_t), 0600|IPC_CREAT|IPC_EXCL);
+        printf("%d\n", shmid);
 
         if (shmid < 0) {
             perror("client process:");
