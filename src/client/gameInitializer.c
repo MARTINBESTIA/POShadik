@@ -42,6 +42,11 @@ int initializeGame() {
     if (pid == 0)
     {
         //server process
+        if (setsid() < 0) {
+            perror("setsid");
+            _exit(1);
+        }
+
         close(pipe_fd[write_end]);
         if (dup2(pipe_fd[read_end], 0)  < 0) {
             perror("dup2");

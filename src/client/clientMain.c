@@ -18,7 +18,6 @@ int main(void) {
     int shmid = shmget(SHM_KEY_CLIENT_SERVER, sizeof(shared_data_t), 0600|IPC_CREAT|IPC_EXCL);
     if (shmid < 0) {
         if (errno == EEXIST) {
-            // segment already exists -> server already running
             serverExists = 1;
             printf("server exists\n");
         } else {

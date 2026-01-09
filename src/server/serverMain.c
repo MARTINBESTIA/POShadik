@@ -65,7 +65,7 @@ int main(int argc, char** argv) {
     printf("Snake direction %c\n", data->snakeDirection);
 
     printf("SERVER BEZII \n");
-    sleep(1);
+    sleep(10);
     printf("SERVER KONCI \n");
 
     if(shmdt(addr) != 0)
