@@ -3,18 +3,52 @@
 //
 
 
+#include <errno.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 
 #include "../shared/gameConfiguration.h"
+#include "../shared/clientServerInterface.h"
 #include "gameField.h"
+
+
 
 int main(int argc, char** argv) {
 
+    const key_t SHM_KEY_CLIENT_SERVER = 0x12345;
+
+    shared_data_t shared_data;
     game_conf_t game_conf;
+
     read(0, &game_conf, sizeof(game_conf_t));
     close(0);
+
+    int shmid;
+    for (;;) {
+        shmid = shmget(SHM_KEY_CLIENT_SERVER, sizeof(shared_data_t), 0600); // no CREATE
+        if (shmid >= 0) break;
+        if (errno == ENOENT) { usleep(10 * 1000); continue; } // wait until created
+        perror("server shmget");
+        exit(1);
+    }
+
+    if (shmid < 0) {
+        perror("server:");
+        perror("shared memory segment creation failed:");
+        return 7;
+    }
+
+    void* addr = shmat(shmid, NULL, 0);
+
+    if(addr == NULL)
+    {
+        perror("Failed to attach shared memory block:");
+        return 1;
+    }
+
+    shared_data_t* data = (shared_data_t*)addr;
+
     printf("Game mode: %c\n", game_conf.gameMode);
     printf("Time limit: %d\n", game_conf.timeLimit);
     printf("Game field: %c\n", game_conf.gameField);
@@ -27,5 +61,19 @@ int main(int argc, char** argv) {
 
     }
 
+    printf("IsConnected %d\n", data->isConnected);
+    printf("Snake direction %c\n", data->snakeDirection);
+
+    while (1) {
+        sleep(10);
+        printf("SERVEEER KUK\n");
+    }
+
+
+    if(shmctl(shmid, IPC_RMID, NULL) != 0)
+    {
+        perror("Failed to remove shared memory block:");
+        return 1;
+    }
     return 0;
 }

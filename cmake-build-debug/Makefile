@@ -173,6 +173,30 @@ src/client/clientMain.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/clientMain.c.s
 .PHONY : src/client/clientMain.c.s
 
+src/client/gameInitializer.o: src/client/gameInitializer.c.o
+.PHONY : src/client/gameInitializer.o
+
+# target to build an object file
+src/client/gameInitializer.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/gameInitializer.c.o
+.PHONY : src/client/gameInitializer.c.o
+
+src/client/gameInitializer.i: src/client/gameInitializer.c.i
+.PHONY : src/client/gameInitializer.i
+
+# target to preprocess a source file
+src/client/gameInitializer.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/gameInitializer.c.i
+.PHONY : src/client/gameInitializer.c.i
+
+src/client/gameInitializer.s: src/client/gameInitializer.c.s
+.PHONY : src/client/gameInitializer.s
+
+# target to generate assembly for a file
+src/client/gameInitializer.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/gameInitializer.c.s
+.PHONY : src/client/gameInitializer.c.s
+
 src/client/inputManager.o: src/client/inputManager.c.o
 .PHONY : src/client/inputManager.o
 
@@ -313,6 +337,9 @@ help:
 	@echo "... src/client/clientMain.o"
 	@echo "... src/client/clientMain.i"
 	@echo "... src/client/clientMain.s"
+	@echo "... src/client/gameInitializer.o"
+	@echo "... src/client/gameInitializer.i"
+	@echo "... src/client/gameInitializer.s"
 	@echo "... src/client/inputManager.o"
 	@echo "... src/client/inputManager.i"
 	@echo "... src/client/inputManager.s"

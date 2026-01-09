@@ -11,7 +11,9 @@ add_executable(client
         src/client/inputManager.c
         src/client/inputManager.h
         src/shared/clientServerInterface.h
-        src/shared/clientServerInterface.c)
+        src/shared/clientServerInterface.c
+        src/client/gameInitializer.h
+        src/client/gameInitializer.c)
 
 add_executable(server
         src/shared/gameConfiguration.h

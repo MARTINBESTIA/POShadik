@@ -12,8 +12,9 @@
 #include <pthread.h>
 #include <sys/ipc.h>
 #include <sys/shm.h>
-
-const key_t SHM_KEY_CLIENT_SERVER = 0x12345;
+#include <unistd.h>
+#include <stdio.h>
+#include <string.h>
 
 typedef struct shared_data {
     pthread_mutex_t snakeDirectionMutex;

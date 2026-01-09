@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/client/clientMain.c" "CMakeFiles/client.dir/src/client/clientMain.c.o" "gcc" "CMakeFiles/client.dir/src/client/clientMain.c.o.d"
+  "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/client/gameInitializer.c" "CMakeFiles/client.dir/src/client/gameInitializer.c.o" "gcc" "CMakeFiles/client.dir/src/client/gameInitializer.c.o.d"
   "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/client/inputManager.c" "CMakeFiles/client.dir/src/client/inputManager.c.o" "gcc" "CMakeFiles/client.dir/src/client/inputManager.c.o.d"
   "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/shared/clientServerInterface.c" "CMakeFiles/client.dir/src/shared/clientServerInterface.c.o" "gcc" "CMakeFiles/client.dir/src/shared/clientServerInterface.c.o.d"
   "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/shared/gameConfiguration.c" "CMakeFiles/client.dir/src/shared/gameConfiguration.c.o" "gcc" "CMakeFiles/client.dir/src/shared/gameConfiguration.c.o.d"
