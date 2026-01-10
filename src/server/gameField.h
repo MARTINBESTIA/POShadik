@@ -8,7 +8,7 @@
 typedef struct position {
     int x;
     int y;
-    int typeOccupied; // 0 - empty, 1 - snake, 2 - fruit, 3 - obstacle
+    char typeOccupied; // ' ' - empty, H - snake, F - fruit, X - obstacle
 } position_t;
 
 typedef struct snakePosition {

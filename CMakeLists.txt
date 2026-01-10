@@ -15,7 +15,9 @@ add_executable(client
         src/client/gameInitializer.h
         src/client/gameInitializer.c
         src/client/clientSharedInterface.h
-        src/client/clientSharedInterface.c)
+        src/client/clientSharedInterface.c
+        src/client/clientThreadsManager.h
+        src/client/clientThreadsManager.c)
 
 add_executable(server
         src/shared/gameConfiguration.h

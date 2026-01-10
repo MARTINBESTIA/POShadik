@@ -5,40 +5,40 @@
 #include <pthread.h>
 #include "clientSharedInterface.h"
 
-void changeSnakeDirectionLeft(shared_data_t *data) {
-    pthread_mutex_lock(&data->snakeDirectionMutex);
-    if (data->snakeDirection == DIRECTION_UP) {
-        data->snakeDirection = DIRECTION_LEFT;
-    } else if (data->snakeDirection == DIRECTION_DOWN) {
-        data->snakeDirection = DIRECTION_RIGHT;
-    } else if (data->snakeDirection == DIRECTION_LEFT) {
-        data->snakeDirection = DIRECTION_DOWN;
-    } else if (data->snakeDirection == DIRECTION_RIGHT) {
-        data->snakeDirection = DIRECTION_UP;
+void changeSnakeDirectionLeft(input_th_data_t *data) {
+    pthread_mutex_lock(data->snakeDirectionMutexPtr);
+    if (*data->snakeDirectionPtr == DIRECTION_UP) {
+        *data->snakeDirectionPtr  = DIRECTION_LEFT;
+    } else if (*data->snakeDirectionPtr  == DIRECTION_DOWN) {
+        *data->snakeDirectionPtr  = DIRECTION_RIGHT;
+    } else if (*data->snakeDirectionPtr  == DIRECTION_LEFT) {
+        *data->snakeDirectionPtr  = DIRECTION_DOWN;
+    } else if (*data->snakeDirectionPtr  == DIRECTION_RIGHT) {
+        *data->snakeDirectionPtr  = DIRECTION_UP;
     }
-    pthread_mutex_unlock(&data->snakeDirectionMutex);
+    pthread_mutex_unlock(data->snakeDirectionMutexPtr);
 }
 
-void changeSnakeDirectionRight(shared_data_t *data) {
-    pthread_mutex_lock(&data->snakeDirectionMutex);
-    if (data->snakeDirection == DIRECTION_UP) {
-        data->snakeDirection = DIRECTION_RIGHT;
-    } else if (data->snakeDirection == DIRECTION_DOWN) {
-        data->snakeDirection = DIRECTION_LEFT;
-    } else if (data->snakeDirection == DIRECTION_LEFT) {
-        data->snakeDirection = DIRECTION_UP;
-    } else if (data->snakeDirection == DIRECTION_RIGHT) {
-        data->snakeDirection = DIRECTION_DOWN;
+void changeSnakeDirectionRight(input_th_data_t *data) {
+    pthread_mutex_lock(data->snakeDirectionMutexPtr);
+    if (*data->snakeDirectionPtr == DIRECTION_UP) {
+        *data->snakeDirectionPtr = DIRECTION_RIGHT;
+    } else if (*data->snakeDirectionPtr == DIRECTION_DOWN) {
+        *data->snakeDirectionPtr = DIRECTION_LEFT;
+    } else if (*data->snakeDirectionPtr == DIRECTION_LEFT) {
+        *data->snakeDirectionPtr = DIRECTION_UP;
+    } else if (*data->snakeDirectionPtr == DIRECTION_RIGHT) {
+        *data->snakeDirectionPtr = DIRECTION_DOWN;
     }
-    pthread_mutex_unlock(&data->snakeDirectionMutex);
+    pthread_mutex_unlock(data->snakeDirectionMutexPtr);
 }
 
-void readGameField(shared_data_t *data) {
+void readGameField(output_th_data_t *data) {
 }
 
 
-void updateLastClientUpdate(shared_data_t *data) {
-    pthread_mutex_lock(&data->clientUpdateMutex);
-    data->lastClientUpdate = time(NULL);
-    pthread_mutex_unlock(&data->clientUpdateMutex);
+void updateLastClientUpdate(time_update_th_data_t *data) {
+    pthread_mutex_lock(data->clientUpdateMutexPtr);
+    *data->lastClientUpdatePtr = time(NULL);
+    pthread_mutex_unlock(data->clientUpdateMutexPtr);
 }

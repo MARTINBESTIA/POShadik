@@ -21,10 +21,11 @@ typedef struct shared_data {
     pthread_mutex_t snakeDirectionMutex;
     pthread_mutex_t updateGameFieldMutex;
     pthread_mutex_t clientUpdateMutex;
+    pthread_mutex_t isConnectedMutex;
     char snakeDirection;
     char** outputGameField;
     int isConnected;
-    time_t lastClientUpdate;
+    time_t lastClientUpdateTime;
 } shared_data_t;
 
 void sharedDataInit(shared_data_t* data);

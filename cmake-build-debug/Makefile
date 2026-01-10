@@ -197,6 +197,30 @@ src/client/clientSharedInterface.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/clientSharedInterface.c.s
 .PHONY : src/client/clientSharedInterface.c.s
 
+src/client/clientThreadsManager.o: src/client/clientThreadsManager.c.o
+.PHONY : src/client/clientThreadsManager.o
+
+# target to build an object file
+src/client/clientThreadsManager.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/clientThreadsManager.c.o
+.PHONY : src/client/clientThreadsManager.c.o
+
+src/client/clientThreadsManager.i: src/client/clientThreadsManager.c.i
+.PHONY : src/client/clientThreadsManager.i
+
+# target to preprocess a source file
+src/client/clientThreadsManager.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/clientThreadsManager.c.i
+.PHONY : src/client/clientThreadsManager.c.i
+
+src/client/clientThreadsManager.s: src/client/clientThreadsManager.c.s
+.PHONY : src/client/clientThreadsManager.s
+
+# target to generate assembly for a file
+src/client/clientThreadsManager.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/clientThreadsManager.c.s
+.PHONY : src/client/clientThreadsManager.c.s
+
 src/client/gameInitializer.o: src/client/gameInitializer.c.o
 .PHONY : src/client/gameInitializer.o
 
@@ -388,6 +412,9 @@ help:
 	@echo "... src/client/clientSharedInterface.o"
 	@echo "... src/client/clientSharedInterface.i"
 	@echo "... src/client/clientSharedInterface.s"
+	@echo "... src/client/clientThreadsManager.o"
+	@echo "... src/client/clientThreadsManager.i"
+	@echo "... src/client/clientThreadsManager.s"
 	@echo "... src/client/gameInitializer.o"
 	@echo "... src/client/gameInitializer.i"
 	@echo "... src/client/gameInitializer.s"
