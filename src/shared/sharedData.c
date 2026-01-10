@@ -22,7 +22,9 @@ void sharedDataInit(shared_data_t* data) {
     data->field = (field_t){0};
     data->snakeDirection = DIRECTION_RIGHT;
     data->isConnected = 1;
+    data->gameState = 'R'; // running
     data->lastClientUpdateTime = time(NULL);
+    data->gameStartTime = time(NULL);
 }
 
 void sharedDataDestroy(shared_data_t* data) {

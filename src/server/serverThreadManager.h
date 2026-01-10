@@ -15,12 +15,16 @@ typedef struct UpdateGameFieldThreadData {
     pthread_mutex_t* updateGameFieldMutexPtr;
     char* snakeDirectionPtr;
     int* isConnectedPtr;
+    char* gameStatePtr;
 } update_field_th_data_t;
 
 typedef struct ConnectionStatusThreadData {
     time_t* lastClientUpdatePtr;
     pthread_mutex_t* clientUpdateMutexPtr;
     int* isConnectedPtr;
+    char* gameStatePtr;
+    time_t* timeDurationPtr;
+    time_t* gameStartTimePtr;
 } connection_status_th_data_t;
 
 void* updateGameFieldThread(void* arg);

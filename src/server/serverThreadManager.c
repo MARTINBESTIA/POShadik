@@ -6,15 +6,21 @@
 
 void* updateGameFieldThread(void* data) {
     update_field_th_data_t* threadData = (update_field_th_data_t*)data;
-    //while (threadData->isConnectedPtr)
-    printf("Starting game field update thread...\n");
     spawnFruit(threadData->fieldPtr);
-    for (int i = 0; i < 1000; i++) {
+    while (threadData->isConnectedPtr) {
         pthread_mutex_lock(threadData->updateGameFieldMutexPtr);
         int alive = moveSnake(threadData->fieldPtr, threadData->snakePtr, *(threadData->snakeDirectionPtr));
+        if (alive == -1) {
+            printf("Collision detected! Game Over.\n");
+            *(threadData->isConnectedPtr) = 0; // For example, disconnect client
+            *(threadData->gameStatePtr) = 'E';
+            pthread_mutex_unlock(threadData->updateGameFieldMutexPtr);
+            break; // ended
+        }
         pthread_mutex_unlock(threadData->updateGameFieldMutexPtr);
-        usleep(1000 * 1000); // 1000 ms
+        usleep(350 * 1000); // 350 ms
     }
+    printf("Server updateGameFieldThread ending\n");
     return NULL;
 }
 
@@ -22,7 +28,15 @@ void* connectionStatusThread(void* data) {
     connection_status_th_data_t* threadData = (connection_status_th_data_t*)data;
     while (*(threadData->isConnectedPtr)) {
         checkConnectionStatus(threadData->lastClientUpdatePtr, threadData->clientUpdateMutexPtr, threadData->isConnectedPtr);
-        usleep(200 * 1000); // 200 ms
+        double gameDuration = difftime(*threadData->gameStartTimePtr, time(NULL));
+        if (*(threadData->timeDurationPtr) > 0 && gameDuration >= *(threadData->timeDurationPtr)) {
+            *(threadData->isConnectedPtr) = 0;
+            *(threadData->gameStatePtr) = 'E'; // ended
+            break;
+        }
+        if (*(threadData->gameStatePtr) == 'E') break; // Ended)
+        usleep(50 * 1000); // 50 ms
     }
+    printf("Server connectionStatusThread ending\n");
     return NULL;
 }

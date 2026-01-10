@@ -11,16 +11,19 @@
 typedef struct InputThreadData {
     pthread_mutex_t* snakeDirectionMutexPtr;
     char* snakeDirectionPtr;
+    char* gameStatePtr;
 } input_th_data_t;
 
 typedef struct OutputThreadData {
     pthread_mutex_t* updateGameFieldMutexPtr;
     field_t* fieldPtr;
+    char* gameStatePtr;
 } output_th_data_t;
 
 typedef struct TimeClientUpdateThreadData {
     pthread_mutex_t* clientUpdateMutexPtr;
     time_t* lastClientUpdatePtr;
+    char* gameStatePtr;
 } time_update_th_data_t;
 
 void *inputThreadFunction(void* arg);

@@ -26,7 +26,10 @@ typedef struct shared_data {
     char snakeDirection;
     field_t field;
     int isConnected;
+    char gameState; // 'R' running, 'P' paused, 'E' ended
     time_t lastClientUpdateTime;
+    time_t gameDuration;
+    time_t gameStartTime;
 } shared_data_t;
 
 void sharedDataInit(shared_data_t* data);

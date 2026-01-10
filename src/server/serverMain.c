@@ -68,19 +68,18 @@ int main(int argc, char** argv) {
     initializeGameField(&sh_data->field, game_conf.fieldLengthX, game_conf.fieldLengthY, game_conf.randomGeneration);
     initializeSnakePosition(&snakePosition, game_conf.fieldLengthX/2, game_conf.fieldLengthY/2, game_conf.fieldLengthX, game_conf.fieldLengthY);
 
-    update_field_th_data_t updateFieldData = {&sh_data->field, &snakePosition, &sh_data->updateGameFieldMutex, &sh_data->snakeDirection, &sh_data->isConnected};
-    connection_status_th_data_t connectionStatusData = {&sh_data->lastClientUpdateTime, &sh_data->clientUpdateMutex, &sh_data->isConnected};
-
+    update_field_th_data_t updateFieldData = {&sh_data->field, &snakePosition, &sh_data->updateGameFieldMutex, &sh_data->snakeDirection, &sh_data->isConnected, &sh_data->gameState};
+    connection_status_th_data_t connectionStatusData = {&sh_data->lastClientUpdateTime, &sh_data->clientUpdateMutex, &sh_data->isConnected, &sh_data->gameState, &sh_data->gameDuration, &sh_data->gameStartTime};
 
     pthread_t threads[2];
     pthread_create(&threads[0], NULL, &updateGameFieldThread, &updateFieldData);
-    //pthread_create(&threads[1], NULL, &connectionStatusThread, &connectionStatusData);
+    pthread_create(&threads[1], NULL, &connectionStatusThread, &connectionStatusData);
 
 
     printf("SERVER BEZII \n");
 
     pthread_join(threads[0], NULL);
-    //pthread_join(threads[1], NULL);
+    pthread_join(threads[1], NULL);
 
 
     printf("SERVER KONCI \n");

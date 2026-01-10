@@ -117,6 +117,7 @@ int main(void) {
             }
 
             shared_data_t* sh_data = (shared_data_t*)addr;
+            sh_data->gameDuration = (game_conf.gameMode == 'T') ? game_conf.timeLimit : -1;
             sharedDataInit(sh_data);
 
             close(pipe_fd[read_end]);
@@ -128,19 +129,19 @@ int main(void) {
 
             pthread_t threads[3];
 
-            input_th_data_t inputThreadData = {&sh_data->snakeDirectionMutex, &sh_data->snakeDirection};
-            output_th_data_t outputThreadData = {&sh_data->updateGameFieldMutex, &sh_data->field};
-            time_update_th_data_t updateTimeThreadData = {&sh_data->clientUpdateMutex, &sh_data->lastClientUpdateTime};
+            input_th_data_t inputThreadData = {&sh_data->snakeDirectionMutex, &sh_data->snakeDirection, &sh_data->gameState};
+            output_th_data_t outputThreadData = {&sh_data->updateGameFieldMutex, &sh_data->field, &sh_data->gameState};
+            time_update_th_data_t updateTimeThreadData = {&sh_data->clientUpdateMutex, &sh_data->lastClientUpdateTime, &sh_data->gameState};
 
             printf("klient bezi\n");
-/*
-            pthread_create(&threads[0], NULL, &timeClientUpdateThreadFunction, &updateTimeThreadData);*/
+
+            pthread_create(&threads[0], NULL, &timeClientUpdateThreadFunction, &updateTimeThreadData);
             pthread_create(&threads[1], NULL, &inputThreadFunction, &inputThreadData);
             pthread_create(&threads[2], NULL, &outputThreadFunction, &outputThreadData);
 
             sleep(10);
 
-           // pthread_join(threads[0], NULL);
+            pthread_join(threads[0], NULL);
             pthread_join(threads[1], NULL);
             pthread_join(threads[2], NULL);
 

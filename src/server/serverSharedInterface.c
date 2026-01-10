@@ -18,11 +18,12 @@ char readSnakeDirection(shared_data_t *data, char *direction) {
 void checkConnectionStatus(time_t* lastClientUpdatePtr, pthread_mutex_t* clientUpdateMutexPtr, int* isConnectedPtr) {
     pthread_mutex_lock(clientUpdateMutexPtr);
     time_t currentTime = time(NULL);
-    double diff = difftime(currentTime, *lastClientUpdatePtr);
-    if (diff > 5.0) {
+    double diffClientConnected = difftime(currentTime, *lastClientUpdatePtr);
+    if (diffClientConnected > 5.0) {
         *isConnectedPtr = 0;
     } else {
         *isConnectedPtr = 1;
     }
     pthread_mutex_unlock(clientUpdateMutexPtr);
+
 }
