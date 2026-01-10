@@ -16,6 +16,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <time.h>
+#include "../server/gameField.h"
 
 typedef struct shared_data {
     pthread_mutex_t snakeDirectionMutex;
@@ -23,7 +24,7 @@ typedef struct shared_data {
     pthread_mutex_t clientUpdateMutex;
     pthread_mutex_t isConnectedMutex;
     char snakeDirection;
-    char** outputGameField;
+    field_t* field;
     int isConnected;
     time_t lastClientUpdateTime;
 } shared_data_t;

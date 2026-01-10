@@ -83,4 +83,7 @@ CMakeFiles/server.dir/src/server/serverMain.c.o: \
  /usr/include/x86_64-linux-gnu/bits/types/struct_shmid_ds.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_shmid64_ds.h \
  /usr/include/string.h /usr/include/strings.h \
- /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/server/gameField.h
+ /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/server/../shared/../server/gameField.h \
+ /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/server/serverThreadManager.h \
+ /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/server/gameField.h \
+ /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/server/serverSharedInterface.h

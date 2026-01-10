@@ -8,6 +8,7 @@
 #include <errno.h>
 #include "../shared/gameConfiguration.h"
 #include "../shared/sharedData.h"
+#include "clientThreadsManager.h"
 #include <pthread.h>
 
 #include "gameInitializer.h"
@@ -89,6 +90,22 @@ int initializeGame() {
             return 4;
         }
         close(pipe_fd[write_end]);
+
+        pthread_t threads[3];
+
+        input_th_data_t inputThreadData = {&data->snakeDirectionMutex, &data->snakeDirection};
+        output_th_data_t outputThreadData = {&data->updateGameFieldMutex, data->field};
+        time_update_th_data_t updateTimeThreadData = {&data->clientUpdateMutex, &data->lastClientUpdateTime};
+
+        pthread_create(&threads[0], NULL, &timeClientUpdateThreadFunction, &updateTimeThreadData);
+        pthread_create(&threads[1], NULL, &inputThreadFunction, &inputThreadData);
+        pthread_create(&threads[2], NULL, &outputThreadFunction, &outputThreadData);
+
+        sleep(25);
+
+        pthread_join(threads[0], NULL);
+        pthread_join(threads[1], NULL);
+        pthread_join(threads[2], NULL);
     }
     return 0;
 }

@@ -7,8 +7,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/client.dir/src/client/clientThreadsManager.c.o.d"
   "CMakeFiles/client.dir/src/client/gameInitializer.c.o"
   "CMakeFiles/client.dir/src/client/gameInitializer.c.o.d"
-  "CMakeFiles/client.dir/src/client/inputManager.c.o"
-  "CMakeFiles/client.dir/src/client/inputManager.c.o.d"
   "CMakeFiles/client.dir/src/shared/gameConfiguration.c.o"
   "CMakeFiles/client.dir/src/shared/gameConfiguration.c.o.d"
   "CMakeFiles/client.dir/src/shared/sharedData.c.o"

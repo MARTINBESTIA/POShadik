@@ -5,6 +5,8 @@
 #include <pthread.h>
 #include "serverSharedInterface.h"
 
+#include "serverThreadManager.h"
+
 
 char readSnakeDirection(shared_data_t *data, char *direction) {
     pthread_mutex_lock(&data->snakeDirectionMutex);
@@ -13,17 +15,14 @@ char readSnakeDirection(shared_data_t *data, char *direction) {
     return *direction;
 }
 
-void updateGameField(shared_data_t *data) {
-}
-
-void checkConnectionStatus(shared_data_t *data) {
-    pthread_mutex_lock(&data->clientUpdateMutex);
+void checkConnectionStatus(time_t* lastClientUpdatePtr, pthread_mutex_t* clientUpdateMutexPtr, int* isConnectedPtr) {
+    pthread_mutex_lock(clientUpdateMutexPtr);
     time_t currentTime = time(NULL);
-    double diff = difftime(currentTime, data->lastClientUpdate);
+    double diff = difftime(currentTime, *lastClientUpdatePtr);
     if (diff > 5.0) {
-        data->isConnected = 0;
+        *isConnectedPtr = 0;
     } else {
-        data->isConnected = 1;
+        *isConnectedPtr = 1;
     }
-    pthread_mutex_unlock(&data->clientUpdateMutex);
+    pthread_mutex_unlock(clientUpdateMutexPtr);
 }

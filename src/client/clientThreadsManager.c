@@ -26,7 +26,15 @@ void *outputThreadFunction(void *arg) {
     output_th_data_t *data = (output_th_data_t *)arg;
     while (1) {
         pthread_mutex_lock(data->updateGameFieldMutexPtr);
-        // Here you would typically copy the game field data to outputGameFieldPtr
+        printf("\033[2J");
+        fflush(stdout);
+
+        for (int i = 0; i < data->fieldPtr->fieldLengthY; i++) {
+            for (int e = 0 ; e < data->fieldPtr->fieldLengthX; e++) {
+                printf("%c" ,data->fieldPtr->positions[i][e].typeOccupied);
+            }
+            printf("\n");
+        }
         pthread_mutex_unlock(data->updateGameFieldMutexPtr);
         usleep(50000); // Sleep for 50ms
     }
@@ -39,7 +47,7 @@ void *timeClientUpdateThreadFunction(void *arg) {
         pthread_mutex_lock(data->clientUpdateMutexPtr);
         updateLastClientUpdate(data);
         pthread_mutex_unlock(data->clientUpdateMutexPtr);
-        usleep(50000); // Update every second
+        usleep(30000);
     }
     return NULL;
 }

@@ -1,7 +1,9 @@
-CMakeFiles/server.dir/src/server/serverSharedInterface.c.o: \
- /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/server/serverSharedInterface.c \
- /usr/include/stdc-predef.h /usr/include/pthread.h \
- /usr/include/features.h /usr/include/features-time64.h \
+CMakeFiles/client.dir/src/client/clientThreadsManager.c.o: \
+ /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/client/clientThreadsManager.c \
+ /usr/include/stdc-predef.h \
+ /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/client/clientThreadsManager.h \
+ /usr/include/pthread.h /usr/include/features.h \
+ /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
  /usr/include/x86_64-linux-gnu/bits/timesize.h \
  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
@@ -38,8 +40,7 @@ CMakeFiles/server.dir/src/server/serverSharedInterface.c.o: \
  /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min.h \
- /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/server/serverSharedInterface.h \
- /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/server/../shared/sharedData.h \
+ /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/client/../shared/sharedData.h \
  /usr/include/x86_64-linux-gnu/sys/ipc.h \
  /usr/include/x86_64-linux-gnu/bits/ipctypes.h \
  /usr/include/x86_64-linux-gnu/bits/ipc.h \
@@ -67,6 +68,5 @@ CMakeFiles/server.dir/src/server/serverSharedInterface.c.o: \
  /usr/include/x86_64-linux-gnu/bits/floatn.h \
  /usr/include/x86_64-linux-gnu/bits/floatn-common.h /usr/include/string.h \
  /usr/include/strings.h \
- /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/server/../shared/../server/gameField.h \
- /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/server/serverThreadManager.h \
- /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/server/gameField.h
+ /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/client/../shared/../server/gameField.h \
+ /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/client/clientSharedInterface.h

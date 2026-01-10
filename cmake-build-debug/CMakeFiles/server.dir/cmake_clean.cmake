@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/server.dir/src/server/serverMain.c.o.d"
   "CMakeFiles/server.dir/src/server/serverSharedInterface.c.o"
   "CMakeFiles/server.dir/src/server/serverSharedInterface.c.o.d"
+  "CMakeFiles/server.dir/src/server/serverThreadManager.c.o"
+  "CMakeFiles/server.dir/src/server/serverThreadManager.c.o.d"
   "CMakeFiles/server.dir/src/shared/gameConfiguration.c.o"
   "CMakeFiles/server.dir/src/shared/gameConfiguration.c.o.d"
   "CMakeFiles/server.dir/src/shared/sharedData.c.o"

@@ -64,7 +64,7 @@ void fillGameConfiguration(game_conf_t* config) {
             }
         }
 
-        if (randomGeneration == 'Y') {
+        if (randomGeneration != 'C') {
             while (1) {
                 printf("Enter field length X (positive integer): ");
                 scanf("%d", &fieldLengthX);

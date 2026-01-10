@@ -12,7 +12,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/client/clientSharedInterface.c" "CMakeFiles/client.dir/src/client/clientSharedInterface.c.o" "gcc" "CMakeFiles/client.dir/src/client/clientSharedInterface.c.o.d"
   "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/client/clientThreadsManager.c" "CMakeFiles/client.dir/src/client/clientThreadsManager.c.o" "gcc" "CMakeFiles/client.dir/src/client/clientThreadsManager.c.o.d"
   "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/client/gameInitializer.c" "CMakeFiles/client.dir/src/client/gameInitializer.c.o" "gcc" "CMakeFiles/client.dir/src/client/gameInitializer.c.o.d"
-  "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/client/inputManager.c" "CMakeFiles/client.dir/src/client/inputManager.c.o" "gcc" "CMakeFiles/client.dir/src/client/inputManager.c.o.d"
   "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/shared/gameConfiguration.c" "CMakeFiles/client.dir/src/shared/gameConfiguration.c.o" "gcc" "CMakeFiles/client.dir/src/shared/gameConfiguration.c.o.d"
   "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/shared/sharedData.c" "CMakeFiles/client.dir/src/shared/sharedData.c.o" "gcc" "CMakeFiles/client.dir/src/shared/sharedData.c.o.d"
   )

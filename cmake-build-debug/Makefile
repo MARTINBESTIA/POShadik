@@ -245,30 +245,6 @@ src/client/gameInitializer.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/gameInitializer.c.s
 .PHONY : src/client/gameInitializer.c.s
 
-src/client/inputManager.o: src/client/inputManager.c.o
-.PHONY : src/client/inputManager.o
-
-# target to build an object file
-src/client/inputManager.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/inputManager.c.o
-.PHONY : src/client/inputManager.c.o
-
-src/client/inputManager.i: src/client/inputManager.c.i
-.PHONY : src/client/inputManager.i
-
-# target to preprocess a source file
-src/client/inputManager.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/inputManager.c.i
-.PHONY : src/client/inputManager.c.i
-
-src/client/inputManager.s: src/client/inputManager.c.s
-.PHONY : src/client/inputManager.s
-
-# target to generate assembly for a file
-src/client/inputManager.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/inputManager.c.s
-.PHONY : src/client/inputManager.c.s
-
 src/server/gameField.o: src/server/gameField.c.o
 .PHONY : src/server/gameField.o
 
@@ -340,6 +316,30 @@ src/server/serverSharedInterface.s: src/server/serverSharedInterface.c.s
 src/server/serverSharedInterface.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/serverSharedInterface.c.s
 .PHONY : src/server/serverSharedInterface.c.s
+
+src/server/serverThreadManager.o: src/server/serverThreadManager.c.o
+.PHONY : src/server/serverThreadManager.o
+
+# target to build an object file
+src/server/serverThreadManager.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/serverThreadManager.c.o
+.PHONY : src/server/serverThreadManager.c.o
+
+src/server/serverThreadManager.i: src/server/serverThreadManager.c.i
+.PHONY : src/server/serverThreadManager.i
+
+# target to preprocess a source file
+src/server/serverThreadManager.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/serverThreadManager.c.i
+.PHONY : src/server/serverThreadManager.c.i
+
+src/server/serverThreadManager.s: src/server/serverThreadManager.c.s
+.PHONY : src/server/serverThreadManager.s
+
+# target to generate assembly for a file
+src/server/serverThreadManager.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/serverThreadManager.c.s
+.PHONY : src/server/serverThreadManager.c.s
 
 src/shared/gameConfiguration.o: src/shared/gameConfiguration.c.o
 .PHONY : src/shared/gameConfiguration.o
@@ -418,9 +418,6 @@ help:
 	@echo "... src/client/gameInitializer.o"
 	@echo "... src/client/gameInitializer.i"
 	@echo "... src/client/gameInitializer.s"
-	@echo "... src/client/inputManager.o"
-	@echo "... src/client/inputManager.i"
-	@echo "... src/client/inputManager.s"
 	@echo "... src/server/gameField.o"
 	@echo "... src/server/gameField.i"
 	@echo "... src/server/gameField.s"
@@ -430,6 +427,9 @@ help:
 	@echo "... src/server/serverSharedInterface.o"
 	@echo "... src/server/serverSharedInterface.i"
 	@echo "... src/server/serverSharedInterface.s"
+	@echo "... src/server/serverThreadManager.o"
+	@echo "... src/server/serverThreadManager.i"
+	@echo "... src/server/serverThreadManager.s"
 	@echo "... src/shared/gameConfiguration.o"
 	@echo "... src/shared/gameConfiguration.i"
 	@echo "... src/shared/gameConfiguration.s"

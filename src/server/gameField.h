@@ -29,7 +29,7 @@ int checkCollision(field_t *gameField, snake_position_t *snakePosition);
 void initializeGameField(field_t *gameField, int lengthX, int lengthY, char randomGeneration);
 void destroyGameField(field_t *gameField);
 
-void initializeSnakePosition(snake_position_t *snakePosition, int startX, int startY);
+void initializeSnakePosition(snake_position_t *snakePosition, int startX, int startY, int fieldLengthX, int fieldLengthY);
 void destroySnakePosition(snake_position_t *snakePosition);
 
 #endif //SEMESTRALKA_GAMEFIELD_H

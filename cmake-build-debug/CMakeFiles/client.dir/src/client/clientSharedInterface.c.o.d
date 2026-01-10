@@ -39,6 +39,7 @@ CMakeFiles/client.dir/src/client/clientSharedInterface.c.o: \
  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min.h \
  /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/client/clientSharedInterface.h \
+ /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/client/clientThreadsManager.h \
  /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/client/../shared/sharedData.h \
  /usr/include/x86_64-linux-gnu/sys/ipc.h \
  /usr/include/x86_64-linux-gnu/bits/ipctypes.h \
@@ -66,4 +67,5 @@ CMakeFiles/client.dir/src/client/clientSharedInterface.c.o: \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
  /usr/include/x86_64-linux-gnu/bits/floatn.h \
  /usr/include/x86_64-linux-gnu/bits/floatn-common.h /usr/include/string.h \
- /usr/include/strings.h
+ /usr/include/strings.h \
+ /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/client/../shared/../server/gameField.h

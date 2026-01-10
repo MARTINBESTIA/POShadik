@@ -10,8 +10,9 @@
 
 #include "../shared/gameConfiguration.h"
 #include "../shared/sharedData.h"
+#include "serverThreadManager.h"
 #include "gameField.h"
-
+#include "serverSharedInterface.h"
 
 
 int main(int argc, char** argv) {
@@ -47,7 +48,7 @@ int main(int argc, char** argv) {
         return 1;
     }
 
-    shared_data_t* data = (shared_data_t*)addr;
+    shared_data_t* sh_data = (shared_data_t*)addr;
 
     printf("Game mode: %c\n", game_conf.gameMode);
     printf("Time limit: %d\n", game_conf.timeLimit);
@@ -61,12 +62,35 @@ int main(int argc, char** argv) {
 
     }
 
-    printf("IsConnected %d\n", data->isConnected);
-    printf("Snake direction %c\n", data->snakeDirection);
+    printf("IsConnected %d\n", sh_data->isConnected);
+    printf("Snake direction %c\n", sh_data->snakeDirection);
+
+    field_t gameField;
+    snake_position_t snakePosition;
+    initializeGameField(&gameField, game_conf.fieldLengthX, game_conf.fieldLengthY, game_conf.randomGeneration);
+    initializeSnakePosition(&snakePosition, game_conf.fieldLengthX/2, game_conf.fieldLengthY/2, game_conf.fieldLengthX, game_conf.fieldLengthY);
+    sh_data->field = &gameField;
+
+    update_field_th_data_t updateFieldData = {&gameField, &snakePosition, &sh_data->updateGameFieldMutex, &sh_data->snakeDirection, &sh_data->isConnected};
+    connection_status_th_data_t connectionStatusData = {&sh_data->lastClientUpdateTime, &sh_data->clientUpdateMutex, &sh_data->isConnected};
+
+
+    pthread_t threads[2];
+    pthread_create(&threads[0], NULL, &updateGameFieldThread, &updateFieldData);
+    pthread_create(&threads[1], NULL, &connectionStatusThread, &connectionStatusData);
+
 
     printf("SERVER BEZII \n");
     sleep(10);
+
+    pthread_join(threads[0], NULL);
+    pthread_join(threads[1], NULL);
+
     printf("SERVER KONCI \n");
+
+    destroyGameField(&gameField);
+    destroySnakePosition(&snakePosition);
+    sharedDataDestroy(sh_data);
 
     if(shmdt(addr) != 0)
     {

@@ -79,4 +79,5 @@ CMakeFiles/client.dir/src/client/clientMain.c.o: \
  /usr/include/x86_64-linux-gnu/bits/types/struct_shmid_ds.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_shmid64_ds.h \
  /usr/include/string.h /usr/include/strings.h \
+ /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/client/../shared/../server/gameField.h \
  /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/client/gameInitializer.h

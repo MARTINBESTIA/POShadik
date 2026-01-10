@@ -15,7 +15,7 @@ typedef struct InputThreadData {
 
 typedef struct OutputThreadData {
     pthread_mutex_t* updateGameFieldMutexPtr;
-    char*** outputGameFieldPtr;
+    field_t* fieldPtr;
 } output_th_data_t;
 
 typedef struct TimeClientUpdateThreadData {

@@ -8,8 +8,6 @@ add_executable(client
         src/shared/gameConfiguration.h
         src/shared/gameConfiguration.c
         src/client/clientMain.c
-        src/client/inputManager.c
-        src/client/inputManager.h
         src/shared/sharedData.h
         src/shared/sharedData.c
         src/client/gameInitializer.h
@@ -28,4 +26,6 @@ add_executable(server
         src/shared/sharedData.h
         src/shared/sharedData.c
         src/server/serverSharedInterface.h
-        src/server/serverSharedInterface.c)
+        src/server/serverSharedInterface.c
+        src/server/serverThreadManager.h
+        src/server/serverThreadManager.c)
