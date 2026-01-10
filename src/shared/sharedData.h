@@ -15,13 +15,16 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <string.h>
+#include <time.h>
 
 typedef struct shared_data {
     pthread_mutex_t snakeDirectionMutex;
     pthread_mutex_t updateGameFieldMutex;
+    pthread_mutex_t clientUpdateMutex;
     char snakeDirection;
     char** outputGameField;
     int isConnected;
+    time_t lastClientUpdate;
 } shared_data_t;
 
 void sharedDataInit(shared_data_t* data);

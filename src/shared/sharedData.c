@@ -2,10 +2,8 @@
 // Created by marti on 8. 1. 2026.
 //
 
-#include "clientServerInterface.h"
+#include "sharedData.h"
 #include <stdlib.h>
-
-
 
 
 void sharedDataInit(shared_data_t* data) {
@@ -23,3 +21,5 @@ void sharedDataDestroy(shared_data_t* data) {
         free(data->outputGameField);
     }
 }
+
+

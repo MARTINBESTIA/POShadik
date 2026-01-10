@@ -114,19 +114,19 @@ CMakeFiles/client.dir/src/client/inputManager.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/client.dir/src/client/inputManager.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/client/inputManager.c" -o CMakeFiles/client.dir/src/client/inputManager.c.s
 
-CMakeFiles/client.dir/src/shared/clientServerInterface.c.o: CMakeFiles/client.dir/flags.make
-CMakeFiles/client.dir/src/shared/clientServerInterface.c.o: /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/shared/clientServerInterface.c
-CMakeFiles/client.dir/src/shared/clientServerInterface.c.o: CMakeFiles/client.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/client.dir/src/shared/clientServerInterface.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/client.dir/src/shared/clientServerInterface.c.o -MF CMakeFiles/client.dir/src/shared/clientServerInterface.c.o.d -o CMakeFiles/client.dir/src/shared/clientServerInterface.c.o -c "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/shared/clientServerInterface.c"
+CMakeFiles/client.dir/src/shared/sharedData.c.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/shared/sharedData.c.o: /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/shared/sharedData.c
+CMakeFiles/client.dir/src/shared/sharedData.c.o: CMakeFiles/client.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/client.dir/src/shared/sharedData.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/client.dir/src/shared/sharedData.c.o -MF CMakeFiles/client.dir/src/shared/sharedData.c.o.d -o CMakeFiles/client.dir/src/shared/sharedData.c.o -c "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/shared/sharedData.c"
 
-CMakeFiles/client.dir/src/shared/clientServerInterface.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/client.dir/src/shared/clientServerInterface.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/shared/clientServerInterface.c" > CMakeFiles/client.dir/src/shared/clientServerInterface.c.i
+CMakeFiles/client.dir/src/shared/sharedData.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/client.dir/src/shared/sharedData.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/shared/sharedData.c" > CMakeFiles/client.dir/src/shared/sharedData.c.i
 
-CMakeFiles/client.dir/src/shared/clientServerInterface.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/client.dir/src/shared/clientServerInterface.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/shared/clientServerInterface.c" -o CMakeFiles/client.dir/src/shared/clientServerInterface.c.s
+CMakeFiles/client.dir/src/shared/sharedData.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/client.dir/src/shared/sharedData.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/shared/sharedData.c" -o CMakeFiles/client.dir/src/shared/sharedData.c.s
 
 CMakeFiles/client.dir/src/client/gameInitializer.c.o: CMakeFiles/client.dir/flags.make
 CMakeFiles/client.dir/src/client/gameInitializer.c.o: /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/client/gameInitializer.c
@@ -142,13 +142,28 @@ CMakeFiles/client.dir/src/client/gameInitializer.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/client.dir/src/client/gameInitializer.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/client/gameInitializer.c" -o CMakeFiles/client.dir/src/client/gameInitializer.c.s
 
+CMakeFiles/client.dir/src/client/clientSharedInterface.c.o: CMakeFiles/client.dir/flags.make
+CMakeFiles/client.dir/src/client/clientSharedInterface.c.o: /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/client/clientSharedInterface.c
+CMakeFiles/client.dir/src/client/clientSharedInterface.c.o: CMakeFiles/client.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/client.dir/src/client/clientSharedInterface.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/client.dir/src/client/clientSharedInterface.c.o -MF CMakeFiles/client.dir/src/client/clientSharedInterface.c.o.d -o CMakeFiles/client.dir/src/client/clientSharedInterface.c.o -c "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/client/clientSharedInterface.c"
+
+CMakeFiles/client.dir/src/client/clientSharedInterface.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/client.dir/src/client/clientSharedInterface.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/client/clientSharedInterface.c" > CMakeFiles/client.dir/src/client/clientSharedInterface.c.i
+
+CMakeFiles/client.dir/src/client/clientSharedInterface.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/client.dir/src/client/clientSharedInterface.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/client/clientSharedInterface.c" -o CMakeFiles/client.dir/src/client/clientSharedInterface.c.s
+
 # Object files for target client
 client_OBJECTS = \
 "CMakeFiles/client.dir/src/shared/gameConfiguration.c.o" \
 "CMakeFiles/client.dir/src/client/clientMain.c.o" \
 "CMakeFiles/client.dir/src/client/inputManager.c.o" \
-"CMakeFiles/client.dir/src/shared/clientServerInterface.c.o" \
-"CMakeFiles/client.dir/src/client/gameInitializer.c.o"
+"CMakeFiles/client.dir/src/shared/sharedData.c.o" \
+"CMakeFiles/client.dir/src/client/gameInitializer.c.o" \
+"CMakeFiles/client.dir/src/client/clientSharedInterface.c.o"
 
 # External object files for target client
 client_EXTERNAL_OBJECTS =
@@ -156,11 +171,12 @@ client_EXTERNAL_OBJECTS =
 client: CMakeFiles/client.dir/src/shared/gameConfiguration.c.o
 client: CMakeFiles/client.dir/src/client/clientMain.c.o
 client: CMakeFiles/client.dir/src/client/inputManager.c.o
-client: CMakeFiles/client.dir/src/shared/clientServerInterface.c.o
+client: CMakeFiles/client.dir/src/shared/sharedData.c.o
 client: CMakeFiles/client.dir/src/client/gameInitializer.c.o
+client: CMakeFiles/client.dir/src/client/clientSharedInterface.c.o
 client: CMakeFiles/client.dir/build.make
 client: CMakeFiles/client.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable client"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/client.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

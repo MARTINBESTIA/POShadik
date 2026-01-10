@@ -173,6 +173,30 @@ src/client/clientMain.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/clientMain.c.s
 .PHONY : src/client/clientMain.c.s
 
+src/client/clientSharedInterface.o: src/client/clientSharedInterface.c.o
+.PHONY : src/client/clientSharedInterface.o
+
+# target to build an object file
+src/client/clientSharedInterface.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/clientSharedInterface.c.o
+.PHONY : src/client/clientSharedInterface.c.o
+
+src/client/clientSharedInterface.i: src/client/clientSharedInterface.c.i
+.PHONY : src/client/clientSharedInterface.i
+
+# target to preprocess a source file
+src/client/clientSharedInterface.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/clientSharedInterface.c.i
+.PHONY : src/client/clientSharedInterface.c.i
+
+src/client/clientSharedInterface.s: src/client/clientSharedInterface.c.s
+.PHONY : src/client/clientSharedInterface.s
+
+# target to generate assembly for a file
+src/client/clientSharedInterface.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/clientSharedInterface.c.s
+.PHONY : src/client/clientSharedInterface.c.s
+
 src/client/gameInitializer.o: src/client/gameInitializer.c.o
 .PHONY : src/client/gameInitializer.o
 
@@ -269,32 +293,29 @@ src/server/serverMain.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/serverMain.c.s
 .PHONY : src/server/serverMain.c.s
 
-src/shared/clientServerInterface.o: src/shared/clientServerInterface.c.o
-.PHONY : src/shared/clientServerInterface.o
+src/server/serverSharedInterface.o: src/server/serverSharedInterface.c.o
+.PHONY : src/server/serverSharedInterface.o
 
 # target to build an object file
-src/shared/clientServerInterface.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/shared/clientServerInterface.c.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/shared/clientServerInterface.c.o
-.PHONY : src/shared/clientServerInterface.c.o
+src/server/serverSharedInterface.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/serverSharedInterface.c.o
+.PHONY : src/server/serverSharedInterface.c.o
 
-src/shared/clientServerInterface.i: src/shared/clientServerInterface.c.i
-.PHONY : src/shared/clientServerInterface.i
+src/server/serverSharedInterface.i: src/server/serverSharedInterface.c.i
+.PHONY : src/server/serverSharedInterface.i
 
 # target to preprocess a source file
-src/shared/clientServerInterface.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/shared/clientServerInterface.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/shared/clientServerInterface.c.i
-.PHONY : src/shared/clientServerInterface.c.i
+src/server/serverSharedInterface.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/serverSharedInterface.c.i
+.PHONY : src/server/serverSharedInterface.c.i
 
-src/shared/clientServerInterface.s: src/shared/clientServerInterface.c.s
-.PHONY : src/shared/clientServerInterface.s
+src/server/serverSharedInterface.s: src/server/serverSharedInterface.c.s
+.PHONY : src/server/serverSharedInterface.s
 
 # target to generate assembly for a file
-src/shared/clientServerInterface.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/shared/clientServerInterface.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/shared/clientServerInterface.c.s
-.PHONY : src/shared/clientServerInterface.c.s
+src/server/serverSharedInterface.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/serverSharedInterface.c.s
+.PHONY : src/server/serverSharedInterface.c.s
 
 src/shared/gameConfiguration.o: src/shared/gameConfiguration.c.o
 .PHONY : src/shared/gameConfiguration.o
@@ -323,6 +344,33 @@ src/shared/gameConfiguration.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/shared/gameConfiguration.c.s
 .PHONY : src/shared/gameConfiguration.c.s
 
+src/shared/sharedData.o: src/shared/sharedData.c.o
+.PHONY : src/shared/sharedData.o
+
+# target to build an object file
+src/shared/sharedData.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/shared/sharedData.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/shared/sharedData.c.o
+.PHONY : src/shared/sharedData.c.o
+
+src/shared/sharedData.i: src/shared/sharedData.c.i
+.PHONY : src/shared/sharedData.i
+
+# target to preprocess a source file
+src/shared/sharedData.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/shared/sharedData.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/shared/sharedData.c.i
+.PHONY : src/shared/sharedData.c.i
+
+src/shared/sharedData.s: src/shared/sharedData.c.s
+.PHONY : src/shared/sharedData.s
+
+# target to generate assembly for a file
+src/shared/sharedData.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/shared/sharedData.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/shared/sharedData.c.s
+.PHONY : src/shared/sharedData.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -337,6 +385,9 @@ help:
 	@echo "... src/client/clientMain.o"
 	@echo "... src/client/clientMain.i"
 	@echo "... src/client/clientMain.s"
+	@echo "... src/client/clientSharedInterface.o"
+	@echo "... src/client/clientSharedInterface.i"
+	@echo "... src/client/clientSharedInterface.s"
 	@echo "... src/client/gameInitializer.o"
 	@echo "... src/client/gameInitializer.i"
 	@echo "... src/client/gameInitializer.s"
@@ -349,12 +400,15 @@ help:
 	@echo "... src/server/serverMain.o"
 	@echo "... src/server/serverMain.i"
 	@echo "... src/server/serverMain.s"
-	@echo "... src/shared/clientServerInterface.o"
-	@echo "... src/shared/clientServerInterface.i"
-	@echo "... src/shared/clientServerInterface.s"
+	@echo "... src/server/serverSharedInterface.o"
+	@echo "... src/server/serverSharedInterface.i"
+	@echo "... src/server/serverSharedInterface.s"
 	@echo "... src/shared/gameConfiguration.o"
 	@echo "... src/shared/gameConfiguration.i"
 	@echo "... src/shared/gameConfiguration.s"
+	@echo "... src/shared/sharedData.o"
+	@echo "... src/shared/sharedData.i"
+	@echo "... src/shared/sharedData.s"
 .PHONY : help
 
 

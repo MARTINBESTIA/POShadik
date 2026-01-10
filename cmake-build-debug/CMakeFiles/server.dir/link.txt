@@ -1,1 +1,1 @@
-/usr/bin/cc -g CMakeFiles/server.dir/src/server/gameField.c.o CMakeFiles/server.dir/src/shared/gameConfiguration.c.o CMakeFiles/server.dir/src/server/serverMain.c.o CMakeFiles/server.dir/src/shared/clientServerInterface.c.o -o server
+/usr/bin/cc -g CMakeFiles/server.dir/src/server/gameField.c.o CMakeFiles/server.dir/src/shared/gameConfiguration.c.o CMakeFiles/server.dir/src/server/serverMain.c.o CMakeFiles/server.dir/src/shared/sharedData.c.o CMakeFiles/server.dir/src/server/serverSharedInterface.c.o -o server

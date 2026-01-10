@@ -114,26 +114,41 @@ CMakeFiles/server.dir/src/server/serverMain.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/server.dir/src/server/serverMain.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/server/serverMain.c" -o CMakeFiles/server.dir/src/server/serverMain.c.s
 
-CMakeFiles/server.dir/src/shared/clientServerInterface.c.o: CMakeFiles/server.dir/flags.make
-CMakeFiles/server.dir/src/shared/clientServerInterface.c.o: /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/shared/clientServerInterface.c
-CMakeFiles/server.dir/src/shared/clientServerInterface.c.o: CMakeFiles/server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/server.dir/src/shared/clientServerInterface.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/server.dir/src/shared/clientServerInterface.c.o -MF CMakeFiles/server.dir/src/shared/clientServerInterface.c.o.d -o CMakeFiles/server.dir/src/shared/clientServerInterface.c.o -c "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/shared/clientServerInterface.c"
+CMakeFiles/server.dir/src/shared/sharedData.c.o: CMakeFiles/server.dir/flags.make
+CMakeFiles/server.dir/src/shared/sharedData.c.o: /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/shared/sharedData.c
+CMakeFiles/server.dir/src/shared/sharedData.c.o: CMakeFiles/server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/server.dir/src/shared/sharedData.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/server.dir/src/shared/sharedData.c.o -MF CMakeFiles/server.dir/src/shared/sharedData.c.o.d -o CMakeFiles/server.dir/src/shared/sharedData.c.o -c "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/shared/sharedData.c"
 
-CMakeFiles/server.dir/src/shared/clientServerInterface.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/server.dir/src/shared/clientServerInterface.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/shared/clientServerInterface.c" > CMakeFiles/server.dir/src/shared/clientServerInterface.c.i
+CMakeFiles/server.dir/src/shared/sharedData.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/server.dir/src/shared/sharedData.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/shared/sharedData.c" > CMakeFiles/server.dir/src/shared/sharedData.c.i
 
-CMakeFiles/server.dir/src/shared/clientServerInterface.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/server.dir/src/shared/clientServerInterface.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/shared/clientServerInterface.c" -o CMakeFiles/server.dir/src/shared/clientServerInterface.c.s
+CMakeFiles/server.dir/src/shared/sharedData.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/server.dir/src/shared/sharedData.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/shared/sharedData.c" -o CMakeFiles/server.dir/src/shared/sharedData.c.s
+
+CMakeFiles/server.dir/src/server/serverSharedInterface.c.o: CMakeFiles/server.dir/flags.make
+CMakeFiles/server.dir/src/server/serverSharedInterface.c.o: /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/server/serverSharedInterface.c
+CMakeFiles/server.dir/src/server/serverSharedInterface.c.o: CMakeFiles/server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/server.dir/src/server/serverSharedInterface.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/server.dir/src/server/serverSharedInterface.c.o -MF CMakeFiles/server.dir/src/server/serverSharedInterface.c.o.d -o CMakeFiles/server.dir/src/server/serverSharedInterface.c.o -c "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/server/serverSharedInterface.c"
+
+CMakeFiles/server.dir/src/server/serverSharedInterface.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/server.dir/src/server/serverSharedInterface.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/server/serverSharedInterface.c" > CMakeFiles/server.dir/src/server/serverSharedInterface.c.i
+
+CMakeFiles/server.dir/src/server/serverSharedInterface.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/server.dir/src/server/serverSharedInterface.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/server/serverSharedInterface.c" -o CMakeFiles/server.dir/src/server/serverSharedInterface.c.s
 
 # Object files for target server
 server_OBJECTS = \
 "CMakeFiles/server.dir/src/server/gameField.c.o" \
 "CMakeFiles/server.dir/src/shared/gameConfiguration.c.o" \
 "CMakeFiles/server.dir/src/server/serverMain.c.o" \
-"CMakeFiles/server.dir/src/shared/clientServerInterface.c.o"
+"CMakeFiles/server.dir/src/shared/sharedData.c.o" \
+"CMakeFiles/server.dir/src/server/serverSharedInterface.c.o"
 
 # External object files for target server
 server_EXTERNAL_OBJECTS =
@@ -141,10 +156,11 @@ server_EXTERNAL_OBJECTS =
 server: CMakeFiles/server.dir/src/server/gameField.c.o
 server: CMakeFiles/server.dir/src/shared/gameConfiguration.c.o
 server: CMakeFiles/server.dir/src/server/serverMain.c.o
-server: CMakeFiles/server.dir/src/shared/clientServerInterface.c.o
+server: CMakeFiles/server.dir/src/shared/sharedData.c.o
+server: CMakeFiles/server.dir/src/server/serverSharedInterface.c.o
 server: CMakeFiles/server.dir/build.make
 server: CMakeFiles/server.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable server"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/server.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

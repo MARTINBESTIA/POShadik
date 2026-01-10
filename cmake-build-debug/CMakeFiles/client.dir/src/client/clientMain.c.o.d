@@ -55,7 +55,7 @@ CMakeFiles/client.dir/src/client/clientMain.c.o: \
  /usr/include/x86_64-linux-gnu/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/client/../shared/gameConfiguration.h \
- /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/client/../shared/clientServerInterface.h \
+ /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/client/../shared/sharedData.h \
  /usr/include/pthread.h /usr/include/sched.h \
  /usr/include/x86_64-linux-gnu/bits/sched.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \

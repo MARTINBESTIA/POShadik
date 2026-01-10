@@ -10,10 +10,12 @@ add_executable(client
         src/client/clientMain.c
         src/client/inputManager.c
         src/client/inputManager.h
-        src/shared/clientServerInterface.h
-        src/shared/clientServerInterface.c
+        src/shared/sharedData.h
+        src/shared/sharedData.c
         src/client/gameInitializer.h
-        src/client/gameInitializer.c)
+        src/client/gameInitializer.c
+        src/client/clientSharedInterface.h
+        src/client/clientSharedInterface.c)
 
 add_executable(server
         src/shared/gameConfiguration.h
@@ -21,5 +23,7 @@ add_executable(server
         src/server/gameField.c
         src/shared/gameConfiguration.c
         src/server/serverMain.c
-        src/shared/clientServerInterface.h
-        src/shared/clientServerInterface.c)
+        src/shared/sharedData.h
+        src/shared/sharedData.c
+        src/server/serverSharedInterface.h
+        src/server/serverSharedInterface.c)

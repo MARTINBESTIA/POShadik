@@ -7,7 +7,7 @@
 #include <unistd.h>
 #include <errno.h>
 #include "../shared/gameConfiguration.h"
-#include "../shared/clientServerInterface.h"
+#include "../shared/sharedData.h"
 #include "gameInitializer.h"
 
 

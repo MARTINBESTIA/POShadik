@@ -9,7 +9,7 @@
 #include <unistd.h>
 
 #include "../shared/gameConfiguration.h"
-#include "../shared/clientServerInterface.h"
+#include "../shared/sharedData.h"
 #include "gameField.h"
 
 

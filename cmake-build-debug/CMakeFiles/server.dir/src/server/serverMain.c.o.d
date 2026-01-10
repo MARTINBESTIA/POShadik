@@ -59,7 +59,7 @@ CMakeFiles/server.dir/src/server/serverMain.c.o: \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
  /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/server/../shared/gameConfiguration.h \
- /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/server/../shared/clientServerInterface.h \
+ /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/server/../shared/sharedData.h \
  /usr/include/pthread.h /usr/include/sched.h \
  /usr/include/x86_64-linux-gnu/bits/sched.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
