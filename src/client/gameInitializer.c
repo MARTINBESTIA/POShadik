@@ -94,7 +94,7 @@ int initializeGame() {
         pthread_t threads[3];
 
         input_th_data_t inputThreadData = {&data->snakeDirectionMutex, &data->snakeDirection};
-        output_th_data_t outputThreadData = {&data->updateGameFieldMutex, data->field};
+        output_th_data_t outputThreadData = {&data->updateGameFieldMutex, &data->field};
         time_update_th_data_t updateTimeThreadData = {&data->clientUpdateMutex, &data->lastClientUpdateTime};
 
         pthread_create(&threads[0], NULL, &timeClientUpdateThreadFunction, &updateTimeThreadData);

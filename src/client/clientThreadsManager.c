@@ -10,13 +10,9 @@ void *inputThreadFunction(void *arg) {
     while (1) {
         ch = getchar();
         if (ch == 'a') {
-            pthread_mutex_lock(data->snakeDirectionMutexPtr);
             changeSnakeDirectionLeft(data);
-            pthread_mutex_unlock(data->snakeDirectionMutexPtr);
         } else if (ch == 'd') {
-            pthread_mutex_lock(data->snakeDirectionMutexPtr);
             changeSnakeDirectionRight(data);
-            pthread_mutex_unlock(data->snakeDirectionMutexPtr);
         }
     }
     return NULL;
@@ -24,11 +20,12 @@ void *inputThreadFunction(void *arg) {
 
 void *outputThreadFunction(void *arg) {
     output_th_data_t *data = (output_th_data_t *)arg;
-    while (1) {
+    //while (1)
+    printf("Starting output thread...\n");
+    for (int c = 0; c < 1000; c++) {
         pthread_mutex_lock(data->updateGameFieldMutexPtr);
-        printf("\033[2J");
+        printf("\033[H\033[2J");
         fflush(stdout);
-
         for (int i = 0; i < data->fieldPtr->fieldLengthY; i++) {
             for (int e = 0 ; e < data->fieldPtr->fieldLengthX; e++) {
                 printf("%c" ,data->fieldPtr->positions[i][e].typeOccupied);
@@ -36,7 +33,7 @@ void *outputThreadFunction(void *arg) {
             printf("\n");
         }
         pthread_mutex_unlock(data->updateGameFieldMutexPtr);
-        usleep(50000); // Sleep for 50ms
+        usleep(100000); // Sleep for 100ms
     }
     return NULL;
 }

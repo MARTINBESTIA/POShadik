@@ -13,9 +13,7 @@ void initializeGameField(field_t *gameField, int lengthX, int lengthY, char rand
     gameField->fieldLengthX = lengthX;
     gameField->fieldLengthY = lengthY;
 
-    gameField->positions = (position_t **)malloc(lengthY * sizeof(position_t *));
     for (int i = 0; i < lengthY; i++) {
-        gameField->positions[i] = (position_t *)malloc(lengthX * sizeof(position_t));
         for (int j = 0; j < lengthX; j++) {
             gameField->positions[i][j].x = j;
             gameField->positions[i][j].y = i;
@@ -39,8 +37,6 @@ void destroyGameField(field_t *gameField) {
     for (int i = 0; i < gameField->fieldLengthY; i++) {
         free(gameField->positions[i]);
     }
-    free(gameField->positions);
-    gameField->positions = NULL;
     gameField->fieldLengthX = 0;
     gameField->fieldLengthY = 0;
 }
@@ -73,65 +69,62 @@ int moveSnake(field_t *gameField, snake_position_t *snakePosition, char directio
     // Calculate new head position
     int newX = snakePosition->positions[0].x;
     int newY = snakePosition->positions[0].y;
-
     switch (direction) {
-        case DIRECTION_UP:    newY--; break;
-        case DIRECTION_DOWN:  newY++; break;
-        case DIRECTION_LEFT:  newX--; break;
+        case DIRECTION_UP: newY--; break;
+        case DIRECTION_DOWN: newY++; break;
+        case DIRECTION_LEFT: newX--; break;
         case DIRECTION_RIGHT: newX++; break;
         default: return -1; // Invalid direction
     }
-
     newY %= gameField->fieldLengthY;
     newX %= gameField->fieldLengthX;
     if (newY < 0) newY += gameField->fieldLengthY;
     if (newX < 0) newX += gameField->fieldLengthX;
 
-    if (gameField->positions[newY][newX].typeOccupied == 'F') {
-        // Eat fruit: increase snake length
-        snakePosition->length++;
-
-        // Place new head at the front
-        for (int i = snakePosition->length - 1; i > 0; i--) {
-            snakePosition->positions[i] = snakePosition->positions[i - 1];
-        }
-        snakePosition->positions[0].x = newX;
-        snakePosition->positions[0].y = newY;
-        gameField->positions[newY][newX].typeOccupied = ' ';
-        spawnFruit(gameField);
-        return 1;
-    }
-
-    // Move snake positions
+    int ateFood = 0;
+    if (gameField->positions[newY][newX].typeOccupied == 'F') ateFood++;
+    int lastX = snakePosition->positions[snakePosition->length - 1].x;
+    int lastY = snakePosition->positions[snakePosition->length - 1].y;
     for (int i = snakePosition->length - 1; i > 0; i--) {
         snakePosition->positions[i] = snakePosition->positions[i - 1];
+
+        // Update field for body parts
+        int x = snakePosition->positions[i].x;
+        int y = snakePosition->positions[i].y;
+        gameField->positions[y][x].typeOccupied = 'H'; // Body
     }
+    if (!ateFood) {
+        gameField->positions[lastY][lastX].typeOccupied = ' ';
+    }
+
     snakePosition->positions[0].x = newX;
     snakePosition->positions[0].y = newY;
+    gameField->positions[newY][newX].typeOccupied = 'H'; // 'H' for snake head
 
+    if (ateFood) {
+        snakePosition->positions[snakePosition->length].x = lastX;
+        snakePosition->positions[snakePosition->length].y = lastY;
+        gameField->positions[lastY][lastX].typeOccupied = 'H';
+        snakePosition->length++;
+        spawnFruit(gameField);
+    }
     // Check for collisions
     if (checkCollision(gameField, snakePosition)) {
         return -1; // Collision detected
     }
-
     return 0; // Successful move
 }
 
 int checkCollision(field_t *gameField, snake_position_t *snakePosition) {
     int headX = snakePosition->positions[0].x;
-    int headY = snakePosition->positions[0].y;
-
-    // Check obstacle collisions
+    int headY = snakePosition->positions[0].y; // Check obstacle collisions
     if (gameField->positions[headY][headX].typeOccupied == 'X') {
         return 1; // Collision with obstacle
-    }
-
-    // Check self-collisions
+    } // Check self-collisions
     for (int i = 1; i < snakePosition->length; i++) {
         if (snakePosition->positions[i].x == headX && snakePosition->positions[i].y == headY) {
             return 1; // Collision with itself
         }
     }
-
     return 0; // No collision
 }

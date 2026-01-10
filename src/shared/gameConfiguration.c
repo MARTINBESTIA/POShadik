@@ -63,28 +63,27 @@ void fillGameConfiguration(game_conf_t* config) {
                 printf("Invalid input. Please try again.\n");
             }
         }
-
-        if (randomGeneration != 'C') {
-            while (1) {
-                printf("Enter field length X (positive integer): ");
-                scanf("%d", &fieldLengthX);
-                if (fieldLengthX > 0) {
-                    config->fieldLengthX = fieldLengthX;
-                    break;
-                } else {
-                    printf("Invalid input. Please enter a positive integer.\n");
-                }
+    }
+    if (gameField != 'C') {
+        while (1) {
+            printf("Enter field length X (positive integer): ");
+            scanf("%d", &fieldLengthX);
+            if (fieldLengthX > 0 && fieldLengthX <= 100) {
+                config->fieldLengthX = fieldLengthX;
+                break;
+            } else {
+                printf("Invalid input. Please enter a positive integer below 100.\n");
             }
+        }
 
-            while (1) {
-                printf("Enter field length Y (positive integer): ");
-                scanf("%d", &fieldLengthY);
-                if (fieldLengthY > 0) {
-                    config->fieldLengthY = fieldLengthY;
-                    break;
-                } else {
-                    printf("Invalid input. Please enter a positive integer.\n");
-                }
+        while (1) {
+            printf("Enter field length Y (positive integer): ");
+            scanf("%d", &fieldLengthY);
+            if (fieldLengthY > 0 && fieldLengthY <= 100) {
+                config->fieldLengthY = fieldLengthY;
+                break;
+            } else {
+                printf("Invalid input. Please enter a positive integer below 100.\n");
             }
         }
     } else if (gameField == 'C') {
@@ -94,8 +93,4 @@ void fillGameConfiguration(game_conf_t* config) {
         scanf("%s", customFieldPath);
         config->customFieldPath = customFieldPath;
     }
-
-
-
-
 }

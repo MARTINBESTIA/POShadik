@@ -6,7 +6,9 @@ CMakeFiles/client.dir/src/client/clientMain.c.o
  /mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/server/gameField.h
  /mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/shared/gameConfiguration.h
  /mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/shared/sharedData.h
+ /mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/client/clientThreadsManager.h
  /mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/client/gameInitializer.h
+ /usr/include/alloca.h
  /usr/include/asm-generic/errno-base.h
  /usr/include/asm-generic/errno.h
  /usr/include/endian.h
@@ -18,8 +20,10 @@ CMakeFiles/client.dir/src/client/clientMain.c.o
  /usr/include/sched.h
  /usr/include/stdc-predef.h
  /usr/include/stdio.h
+ /usr/include/stdlib.h
  /usr/include/string.h
  /usr/include/strings.h
+ /usr/include/termios.h
  /usr/include/time.h
  /usr/include/unistd.h
  /usr/include/x86_64-linux-gnu/asm/errno.h
@@ -52,8 +56,19 @@ CMakeFiles/client.dir/src/client/clientMain.c.o
  /usr/include/x86_64-linux-gnu/bits/shmlba.h
  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h
+ /usr/include/x86_64-linux-gnu/bits/termios-baud.h
+ /usr/include/x86_64-linux-gnu/bits/termios-c_cc.h
+ /usr/include/x86_64-linux-gnu/bits/termios-c_cflag.h
+ /usr/include/x86_64-linux-gnu/bits/termios-c_iflag.h
+ /usr/include/x86_64-linux-gnu/bits/termios-c_lflag.h
+ /usr/include/x86_64-linux-gnu/bits/termios-c_oflag.h
+ /usr/include/x86_64-linux-gnu/bits/termios-misc.h
+ /usr/include/x86_64-linux-gnu/bits/termios-struct.h
+ /usr/include/x86_64-linux-gnu/bits/termios-tcflow.h
+ /usr/include/x86_64-linux-gnu/bits/termios.h
  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h
  /usr/include/x86_64-linux-gnu/bits/time.h
  /usr/include/x86_64-linux-gnu/bits/time64.h
@@ -84,6 +99,8 @@ CMakeFiles/client.dir/src/client/clientMain.c.o
  /usr/include/x86_64-linux-gnu/bits/typesizes.h
  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h
+ /usr/include/x86_64-linux-gnu/bits/waitflags.h
+ /usr/include/x86_64-linux-gnu/bits/waitstatus.h
  /usr/include/x86_64-linux-gnu/bits/wordsize.h
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h
  /usr/include/x86_64-linux-gnu/gnu/stubs.h
@@ -91,6 +108,7 @@ CMakeFiles/client.dir/src/client/clientMain.c.o
  /usr/include/x86_64-linux-gnu/sys/ipc.h
  /usr/include/x86_64-linux-gnu/sys/select.h
  /usr/include/x86_64-linux-gnu/sys/shm.h
+ /usr/include/x86_64-linux-gnu/sys/ttydefaults.h
  /usr/include/x86_64-linux-gnu/sys/types.h
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h

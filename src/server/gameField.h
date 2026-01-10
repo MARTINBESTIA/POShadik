@@ -4,6 +4,8 @@
 
 #ifndef SEMESTRALKA_GAMEFIELD_H
 #define SEMESTRALKA_GAMEFIELD_H
+#define MAX_FIELD_LENGTH_X 100
+#define MAX_FIELD_LENGTH_Y 100
 
 typedef struct position {
     int x;
@@ -17,7 +19,7 @@ typedef struct snakePosition {
 } snake_position_t;
 
 typedef struct field {
-    position_t** positions;
+    position_t positions[MAX_FIELD_LENGTH_Y][MAX_FIELD_LENGTH_X];
     int fieldLengthX;
     int fieldLengthY;
 } field_t;

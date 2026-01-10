@@ -19,7 +19,6 @@ int main(int argc, char** argv) {
 
     const key_t SHM_KEY_CLIENT_SERVER = 0x12345;
 
-    shared_data_t shared_data;
     game_conf_t game_conf;
 
     read(0, &game_conf, sizeof(game_conf_t));
@@ -53,42 +52,39 @@ int main(int argc, char** argv) {
     printf("Game mode: %c\n", game_conf.gameMode);
     printf("Time limit: %d\n", game_conf.timeLimit);
     printf("Game field: %c\n", game_conf.gameField);
-    if (game_conf.gameField == 'O') {
-        printf("Random generation: %c\n", game_conf.randomGeneration);
-        printf("Field length X: %d\n", game_conf.fieldLengthX);
-        printf("Field length Y: %d\n", game_conf.fieldLengthY);
-    } else if (game_conf.gameField == 'C') {
+    printf("Random generation: %c\n", game_conf.randomGeneration);
+    printf("Field length X: %d\n", game_conf.fieldLengthX);
+    printf("Field length Y: %d\n", game_conf.fieldLengthY);
+    if (game_conf.gameField == 'C') {
         printf("Custom field path: %s\n", game_conf.customFieldPath);
-
     }
 
     printf("IsConnected %d\n", sh_data->isConnected);
     printf("Snake direction %c\n", sh_data->snakeDirection);
 
-    field_t gameField;
-    snake_position_t snakePosition;
-    initializeGameField(&gameField, game_conf.fieldLengthX, game_conf.fieldLengthY, game_conf.randomGeneration);
-    initializeSnakePosition(&snakePosition, game_conf.fieldLengthX/2, game_conf.fieldLengthY/2, game_conf.fieldLengthX, game_conf.fieldLengthY);
-    sh_data->field = &gameField;
 
-    update_field_th_data_t updateFieldData = {&gameField, &snakePosition, &sh_data->updateGameFieldMutex, &sh_data->snakeDirection, &sh_data->isConnected};
+
+    snake_position_t snakePosition;
+    initializeGameField(&sh_data->field, game_conf.fieldLengthX, game_conf.fieldLengthY, game_conf.randomGeneration);
+    initializeSnakePosition(&snakePosition, game_conf.fieldLengthX/2, game_conf.fieldLengthY/2, game_conf.fieldLengthX, game_conf.fieldLengthY);
+
+    update_field_th_data_t updateFieldData = {&sh_data->field, &snakePosition, &sh_data->updateGameFieldMutex, &sh_data->snakeDirection, &sh_data->isConnected};
     connection_status_th_data_t connectionStatusData = {&sh_data->lastClientUpdateTime, &sh_data->clientUpdateMutex, &sh_data->isConnected};
 
 
     pthread_t threads[2];
     pthread_create(&threads[0], NULL, &updateGameFieldThread, &updateFieldData);
-    pthread_create(&threads[1], NULL, &connectionStatusThread, &connectionStatusData);
+    //pthread_create(&threads[1], NULL, &connectionStatusThread, &connectionStatusData);
 
 
     printf("SERVER BEZII \n");
-    sleep(10);
 
     pthread_join(threads[0], NULL);
-    pthread_join(threads[1], NULL);
+    //pthread_join(threads[1], NULL);
+
 
     printf("SERVER KONCI \n");
 
-    destroyGameField(&gameField);
     destroySnakePosition(&snakePosition);
     sharedDataDestroy(sh_data);
 

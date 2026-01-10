@@ -24,7 +24,7 @@ typedef struct shared_data {
     pthread_mutex_t clientUpdateMutex;
     pthread_mutex_t isConnectedMutex;
     char snakeDirection;
-    field_t* field;
+    field_t field;
     int isConnected;
     time_t lastClientUpdateTime;
 } shared_data_t;
