@@ -72,19 +72,19 @@ include CMakeFiles/server.dir/flags.make
 CMakeFiles/server.dir/codegen:
 .PHONY : CMakeFiles/server.dir/codegen
 
-CMakeFiles/server.dir/src/server/gameField.c.o: CMakeFiles/server.dir/flags.make
-CMakeFiles/server.dir/src/server/gameField.c.o: /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/server/gameField.c
-CMakeFiles/server.dir/src/server/gameField.c.o: CMakeFiles/server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/server.dir/src/server/gameField.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/server.dir/src/server/gameField.c.o -MF CMakeFiles/server.dir/src/server/gameField.c.o.d -o CMakeFiles/server.dir/src/server/gameField.c.o -c "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/server/gameField.c"
+CMakeFiles/server.dir/src/server/gameFieldLogic.c.o: CMakeFiles/server.dir/flags.make
+CMakeFiles/server.dir/src/server/gameFieldLogic.c.o: /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/server/gameFieldLogic.c
+CMakeFiles/server.dir/src/server/gameFieldLogic.c.o: CMakeFiles/server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/server.dir/src/server/gameFieldLogic.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/server.dir/src/server/gameFieldLogic.c.o -MF CMakeFiles/server.dir/src/server/gameFieldLogic.c.o.d -o CMakeFiles/server.dir/src/server/gameFieldLogic.c.o -c "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/server/gameFieldLogic.c"
 
-CMakeFiles/server.dir/src/server/gameField.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/server.dir/src/server/gameField.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/server/gameField.c" > CMakeFiles/server.dir/src/server/gameField.c.i
+CMakeFiles/server.dir/src/server/gameFieldLogic.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/server.dir/src/server/gameFieldLogic.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/server/gameFieldLogic.c" > CMakeFiles/server.dir/src/server/gameFieldLogic.c.i
 
-CMakeFiles/server.dir/src/server/gameField.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/server.dir/src/server/gameField.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/server/gameField.c" -o CMakeFiles/server.dir/src/server/gameField.c.s
+CMakeFiles/server.dir/src/server/gameFieldLogic.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/server.dir/src/server/gameFieldLogic.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/server/gameFieldLogic.c" -o CMakeFiles/server.dir/src/server/gameFieldLogic.c.s
 
 CMakeFiles/server.dir/src/shared/gameConfiguration.c.o: CMakeFiles/server.dir/flags.make
 CMakeFiles/server.dir/src/shared/gameConfiguration.c.o: /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/shared/gameConfiguration.c
@@ -158,7 +158,7 @@ CMakeFiles/server.dir/src/server/serverThreadManager.c.s: cmake_force
 
 # Object files for target server
 server_OBJECTS = \
-"CMakeFiles/server.dir/src/server/gameField.c.o" \
+"CMakeFiles/server.dir/src/server/gameFieldLogic.c.o" \
 "CMakeFiles/server.dir/src/shared/gameConfiguration.c.o" \
 "CMakeFiles/server.dir/src/server/serverMain.c.o" \
 "CMakeFiles/server.dir/src/shared/sharedData.c.o" \
@@ -168,7 +168,7 @@ server_OBJECTS = \
 # External object files for target server
 server_EXTERNAL_OBJECTS =
 
-server: CMakeFiles/server.dir/src/server/gameField.c.o
+server: CMakeFiles/server.dir/src/server/gameFieldLogic.c.o
 server: CMakeFiles/server.dir/src/shared/gameConfiguration.c.o
 server: CMakeFiles/server.dir/src/server/serverMain.c.o
 server: CMakeFiles/server.dir/src/shared/sharedData.c.o

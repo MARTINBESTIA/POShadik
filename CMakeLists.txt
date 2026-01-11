@@ -15,12 +15,13 @@ add_executable(client
         src/client/clientSharedInterface.h
         src/client/clientSharedInterface.c
         src/client/clientThreadsManager.h
-        src/client/clientThreadsManager.c)
+        src/client/clientThreadsManager.c
+)
 
 add_executable(server
         src/shared/gameConfiguration.h
-        src/server/gameField.h
-        src/server/gameField.c
+        src/server/gameFieldLogic.h
+        src/server/gameFieldLogic.c
         src/shared/gameConfiguration.c
         src/server/serverMain.c
         src/shared/sharedData.h

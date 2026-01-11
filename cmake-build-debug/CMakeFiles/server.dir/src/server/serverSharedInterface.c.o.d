@@ -67,6 +67,6 @@ CMakeFiles/server.dir/src/server/serverSharedInterface.c.o: \
  /usr/include/x86_64-linux-gnu/bits/floatn.h \
  /usr/include/x86_64-linux-gnu/bits/floatn-common.h /usr/include/string.h \
  /usr/include/strings.h \
- /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/server/../shared/../server/gameField.h \
+ /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/server/../shared/../server/gameFieldLogic.h \
  /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/server/serverThreadManager.h \
- /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/server/gameField.h
+ /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/server/gameFieldLogic.h

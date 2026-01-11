@@ -7,7 +7,11 @@
 void* updateGameFieldThread(void* data) {
     update_field_th_data_t* threadData = (update_field_th_data_t*)data;
     spawnFruit(threadData->fieldPtr);
-    while (*(threadData->isConnectedPtr) && *(threadData->gameStatePtr) != 'E') {
+    while (*(threadData->gameStatePtr) != 'E') {
+        if (*(threadData->gameStatePtr) == 'P') { // paused
+            usleep(100 * 1000); // 100 ms
+            continue;
+        }
         pthread_mutex_lock(threadData->updateGameFieldMutexPtr);
         int alive = moveSnake(threadData->fieldPtr, threadData->snakePtr, *(threadData->snakeDirectionPtr));
         if (alive == -1) {
@@ -26,15 +30,26 @@ void* updateGameFieldThread(void* data) {
 
 void* connectionStatusThread(void* data) {
     connection_status_th_data_t* threadData = (connection_status_th_data_t*)data;
-    while (*(threadData->isConnectedPtr)) {
-        checkConnectionStatus(threadData->lastClientUpdatePtr, threadData->clientUpdateMutexPtr, threadData->isConnectedPtr);
+    while (1) {
+        if (*(threadData->gameStatePtr) == 'E') break; // Ended)
+        int result = checkConnectionStatus(threadData->lastClientUpdatePtr, threadData->clientUpdateMutexPtr, threadData->isConnectedPtr);
+        if (result == 1 && *(threadData->gameStatePtr) != 'P') {
+            *threadData->timeDurationPtr = difftime(time(NULL), *threadData->timeDurationPtr);
+        }
+        if (result == 1) {
+            *(threadData->gameStatePtr) = 'P'; // paused
+            continue;
+        } else if (result == -1) {
+            printf("Client disconnected due to timeout.\n");
+            *(threadData->gameStatePtr) = 'E'; // ended
+            break;
+        }
         double gameDuration = difftime(time(NULL), *threadData->gameStartTimePtr);
         if (*(threadData->timeDurationPtr) > 0 && gameDuration >= *(threadData->timeDurationPtr)) {
             *(threadData->isConnectedPtr) = 0;
             *(threadData->gameStatePtr) = 'E'; // ended
             break;
         }
-        if (*(threadData->gameStatePtr) == 'E') break; // Ended)
         usleep(50 * 1000); // 50 ms
     }
     printf("Server connectionStatusThread ending\n");

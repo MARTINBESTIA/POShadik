@@ -8,6 +8,6 @@
 #include "../shared/sharedData.h"
 
 char readSnakeDirection(shared_data_t* data, char* direction);
-void checkConnectionStatus(time_t* lastClientUpdatePtr, pthread_mutex_t* clientUpdateMutexPtr, int* isConnectedPtr);
+int checkConnectionStatus(time_t* lastClientUpdatePtr, pthread_mutex_t* clientUpdateMutexPtr, int* isConnectedPtr);
 
 #endif //SEMESTRALKA_SERVERSHAREDINTERFACE_H

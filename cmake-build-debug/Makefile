@@ -245,29 +245,29 @@ src/client/gameInitializer.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/src/client/gameInitializer.c.s
 .PHONY : src/client/gameInitializer.c.s
 
-src/server/gameField.o: src/server/gameField.c.o
-.PHONY : src/server/gameField.o
+src/server/gameFieldLogic.o: src/server/gameFieldLogic.c.o
+.PHONY : src/server/gameFieldLogic.o
 
 # target to build an object file
-src/server/gameField.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/gameField.c.o
-.PHONY : src/server/gameField.c.o
+src/server/gameFieldLogic.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/gameFieldLogic.c.o
+.PHONY : src/server/gameFieldLogic.c.o
 
-src/server/gameField.i: src/server/gameField.c.i
-.PHONY : src/server/gameField.i
+src/server/gameFieldLogic.i: src/server/gameFieldLogic.c.i
+.PHONY : src/server/gameFieldLogic.i
 
 # target to preprocess a source file
-src/server/gameField.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/gameField.c.i
-.PHONY : src/server/gameField.c.i
+src/server/gameFieldLogic.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/gameFieldLogic.c.i
+.PHONY : src/server/gameFieldLogic.c.i
 
-src/server/gameField.s: src/server/gameField.c.s
-.PHONY : src/server/gameField.s
+src/server/gameFieldLogic.s: src/server/gameFieldLogic.c.s
+.PHONY : src/server/gameFieldLogic.s
 
 # target to generate assembly for a file
-src/server/gameField.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/gameField.c.s
-.PHONY : src/server/gameField.c.s
+src/server/gameFieldLogic.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/src/server/gameFieldLogic.c.s
+.PHONY : src/server/gameFieldLogic.c.s
 
 src/server/serverMain.o: src/server/serverMain.c.o
 .PHONY : src/server/serverMain.o
@@ -418,9 +418,9 @@ help:
 	@echo "... src/client/gameInitializer.o"
 	@echo "... src/client/gameInitializer.i"
 	@echo "... src/client/gameInitializer.s"
-	@echo "... src/server/gameField.o"
-	@echo "... src/server/gameField.i"
-	@echo "... src/server/gameField.s"
+	@echo "... src/server/gameFieldLogic.o"
+	@echo "... src/server/gameFieldLogic.i"
+	@echo "... src/server/gameFieldLogic.s"
 	@echo "... src/server/serverMain.o"
 	@echo "... src/server/serverMain.i"
 	@echo "... src/server/serverMain.s"

@@ -2,7 +2,7 @@
 // Created by marti on 3. 1. 2026.
 //
 
-#include "gameField.h"
+#include "gameFieldLogic.h"
 #include "../shared/sharedData.h"
 #include <stdlib.h>
 
@@ -80,6 +80,8 @@ int moveSnake(field_t *gameField, snake_position_t *snakePosition, char directio
     newX %= gameField->fieldLengthX;
     if (newY < 0) newY += gameField->fieldLengthY;
     if (newX < 0) newX += gameField->fieldLengthX;
+
+    if (gameField->positions[newY][newX].typeOccupied == 'X') return -1; // Collision with obstacle
 
     int ateFood = 0;
     if (gameField->positions[newY][newX].typeOccupied == 'F') ateFood++;

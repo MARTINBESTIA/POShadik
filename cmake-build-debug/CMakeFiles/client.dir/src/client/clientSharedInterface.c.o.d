@@ -40,16 +40,10 @@ CMakeFiles/client.dir/src/client/clientSharedInterface.c.o: \
  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min.h \
  /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/client/clientSharedInterface.h \
  /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/client/clientThreadsManager.h \
- /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/client/../shared/sharedData.h \
- /usr/include/x86_64-linux-gnu/sys/ipc.h \
- /usr/include/x86_64-linux-gnu/bits/ipctypes.h \
- /usr/include/x86_64-linux-gnu/bits/ipc.h \
- /usr/include/x86_64-linux-gnu/bits/ipc-perm.h \
- /usr/include/x86_64-linux-gnu/sys/shm.h \
- /usr/include/x86_64-linux-gnu/bits/shm.h \
- /usr/include/x86_64-linux-gnu/bits/shmlba.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_shmid_ds.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_shmid64_ds.h \
+ /usr/include/x86_64-linux-gnu/sys/select.h \
+ /usr/include/x86_64-linux-gnu/bits/select.h \
+ /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
  /usr/include/unistd.h /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
  /usr/include/x86_64-linux-gnu/bits/environments.h \
  /usr/include/x86_64-linux-gnu/bits/confname.h \
@@ -66,6 +60,16 @@ CMakeFiles/client.dir/src/client/clientSharedInterface.c.o: \
  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
  /usr/include/x86_64-linux-gnu/bits/floatn.h \
- /usr/include/x86_64-linux-gnu/bits/floatn-common.h /usr/include/string.h \
- /usr/include/strings.h \
- /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/client/../shared/../server/gameField.h
+ /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+ /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/client/../shared/sharedData.h \
+ /usr/include/x86_64-linux-gnu/sys/ipc.h \
+ /usr/include/x86_64-linux-gnu/bits/ipctypes.h \
+ /usr/include/x86_64-linux-gnu/bits/ipc.h \
+ /usr/include/x86_64-linux-gnu/bits/ipc-perm.h \
+ /usr/include/x86_64-linux-gnu/sys/shm.h \
+ /usr/include/x86_64-linux-gnu/bits/shm.h \
+ /usr/include/x86_64-linux-gnu/bits/shmlba.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_shmid_ds.h \
+ /usr/include/x86_64-linux-gnu/bits/types/struct_shmid64_ds.h \
+ /usr/include/string.h /usr/include/strings.h \
+ /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/client/../shared/../server/gameFieldLogic.h

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/server.dir/src/server/gameField.c.o"
-  "CMakeFiles/server.dir/src/server/gameField.c.o.d"
+  "CMakeFiles/server.dir/src/server/gameFieldLogic.c.o"
+  "CMakeFiles/server.dir/src/server/gameFieldLogic.c.o.d"
   "CMakeFiles/server.dir/src/server/serverMain.c.o"
   "CMakeFiles/server.dir/src/server/serverMain.c.o.d"
   "CMakeFiles/server.dir/src/server/serverSharedInterface.c.o"

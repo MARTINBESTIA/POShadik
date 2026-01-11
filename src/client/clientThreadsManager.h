@@ -4,7 +4,9 @@
 
 #ifndef SEMESTRALKA_CLIENTTHREADSMANAGER_H
 #define SEMESTRALKA_CLIENTTHREADSMANAGER_H
-
+#include <sys/select.h>
+#include <unistd.h>
+#include <stdio.h>
 #include <pthread.h>
 #include "../shared/sharedData.h"
 
@@ -18,6 +20,7 @@ typedef struct OutputThreadData {
     pthread_mutex_t* updateGameFieldMutexPtr;
     field_t* fieldPtr;
     char* gameStatePtr;
+    time_t* gameDurationPtr;
 } output_th_data_t;
 
 typedef struct TimeClientUpdateThreadData {

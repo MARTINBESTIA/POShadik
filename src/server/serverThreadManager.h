@@ -4,7 +4,7 @@
 
 #ifndef SEMESTRALKA_SERVERTHREADINTERFACE_H
 #define SEMESTRALKA_SERVERTHREADINTERFACE_H
-#include "gameField.h"
+#include "gameFieldLogic.h"
 #include "../shared/sharedData.h"
 #include <pthread.h>
 

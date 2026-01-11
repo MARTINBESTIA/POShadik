@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/server/gameField.c" "CMakeFiles/server.dir/src/server/gameField.c.o" "gcc" "CMakeFiles/server.dir/src/server/gameField.c.o.d"
+  "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/server/gameFieldLogic.c" "CMakeFiles/server.dir/src/server/gameFieldLogic.c.o" "gcc" "CMakeFiles/server.dir/src/server/gameFieldLogic.c.o.d"
   "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/server/serverMain.c" "CMakeFiles/server.dir/src/server/serverMain.c.o" "gcc" "CMakeFiles/server.dir/src/server/serverMain.c.o.d"
   "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/server/serverSharedInterface.c" "CMakeFiles/server.dir/src/server/serverSharedInterface.c.o" "gcc" "CMakeFiles/server.dir/src/server/serverSharedInterface.c.o.d"
   "/mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/server/serverThreadManager.c" "CMakeFiles/server.dir/src/server/serverThreadManager.c.o" "gcc" "CMakeFiles/server.dir/src/server/serverThreadManager.c.o.d"

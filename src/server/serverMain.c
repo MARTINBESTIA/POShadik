@@ -11,7 +11,7 @@
 #include "../shared/gameConfiguration.h"
 #include "../shared/sharedData.h"
 #include "serverThreadManager.h"
-#include "gameField.h"
+#include "gameFieldLogic.h"
 #include "serverSharedInterface.h"
 
 

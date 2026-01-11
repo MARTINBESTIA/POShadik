@@ -47,5 +47,19 @@ CMakeFiles/server.dir/src/shared/gameConfiguration.c.o: \
  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h \
- /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+ /usr/include/x86_64-linux-gnu/bits/stdlib-float.h /usr/include/string.h \
+ /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+ /usr/include/strings.h /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
+ /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
+ /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+ /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+ /usr/include/linux/limits.h \
+ /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
+ /usr/include/x86_64-linux-gnu/bits/pthread_stack_min.h \
+ /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
  /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/shared/gameConfiguration.h

@@ -67,7 +67,7 @@ CMakeFiles/client.dir/src/shared/sharedData.c.o: \
  /usr/include/x86_64-linux-gnu/bits/floatn.h \
  /usr/include/x86_64-linux-gnu/bits/floatn-common.h /usr/include/string.h \
  /usr/include/strings.h \
- /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/shared/../server/gameField.h \
+ /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/shared/../server/gameFieldLogic.h \
  /usr/include/stdlib.h /usr/include/x86_64-linux-gnu/bits/waitflags.h \
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
  /usr/include/x86_64-linux-gnu/sys/types.h \

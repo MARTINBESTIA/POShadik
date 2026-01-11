@@ -1,7 +1,8 @@
-CMakeFiles/server.dir/src/shared/sharedData.c.o: \
- /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/shared/sharedData.c \
+CMakeFiles/server.dir/src/server/gameFieldLogic.c.o: \
+ /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/server/gameFieldLogic.c \
  /usr/include/stdc-predef.h \
- /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/shared/sharedData.h \
+ /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/server/gameFieldLogic.h \
+ /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/server/../shared/sharedData.h \
  /usr/include/pthread.h /usr/include/features.h \
  /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -67,7 +68,7 @@ CMakeFiles/server.dir/src/shared/sharedData.c.o: \
  /usr/include/x86_64-linux-gnu/bits/floatn.h \
  /usr/include/x86_64-linux-gnu/bits/floatn-common.h /usr/include/string.h \
  /usr/include/strings.h \
- /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/shared/../server/gameFieldLogic.h \
+ /mnt/c/Users/marti/Desktop/škola/3.\ ročník/POS/semestralka/src/server/../shared/../server/gameFieldLogic.h \
  /usr/include/stdlib.h /usr/include/x86_64-linux-gnu/bits/waitflags.h \
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
  /usr/include/x86_64-linux-gnu/sys/types.h \

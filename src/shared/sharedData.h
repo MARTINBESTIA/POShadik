@@ -16,7 +16,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <time.h>
-#include "../server/gameField.h"
+#include "../server/gameFieldLogic.h"
 
 typedef struct shared_data {
     pthread_mutex_t snakeDirectionMutex;
