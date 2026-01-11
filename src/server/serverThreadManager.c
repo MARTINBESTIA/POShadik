@@ -7,7 +7,7 @@
 void* updateGameFieldThread(void* data) {
     update_field_th_data_t* threadData = (update_field_th_data_t*)data;
     spawnFruit(threadData->fieldPtr);
-    while (threadData->isConnectedPtr) {
+    while (*(threadData->isConnectedPtr) && *(threadData->gameStatePtr) != 'E') {
         pthread_mutex_lock(threadData->updateGameFieldMutexPtr);
         int alive = moveSnake(threadData->fieldPtr, threadData->snakePtr, *(threadData->snakeDirectionPtr));
         if (alive == -1) {
@@ -28,7 +28,7 @@ void* connectionStatusThread(void* data) {
     connection_status_th_data_t* threadData = (connection_status_th_data_t*)data;
     while (*(threadData->isConnectedPtr)) {
         checkConnectionStatus(threadData->lastClientUpdatePtr, threadData->clientUpdateMutexPtr, threadData->isConnectedPtr);
-        double gameDuration = difftime(*threadData->gameStartTimePtr, time(NULL));
+        double gameDuration = difftime(time(NULL), *threadData->gameStartTimePtr);
         if (*(threadData->timeDurationPtr) > 0 && gameDuration >= *(threadData->timeDurationPtr)) {
             *(threadData->isConnectedPtr) = 0;
             *(threadData->gameStatePtr) = 'E'; // ended

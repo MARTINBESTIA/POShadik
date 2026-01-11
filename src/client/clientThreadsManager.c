@@ -41,9 +41,7 @@ void *outputThreadFunction(void *arg) {
 void *timeClientUpdateThreadFunction(void *arg) {
     time_update_th_data_t *data = (time_update_th_data_t *)arg;
     while (*data->gameStatePtr != 'E') {
-        pthread_mutex_lock(data->clientUpdateMutexPtr);
         updateLastClientUpdate(data);
-        pthread_mutex_unlock(data->clientUpdateMutexPtr);
         usleep(30000);
     }
     printf("client timeClientThread ending.\n");
