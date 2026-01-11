@@ -55,17 +55,13 @@ int main(int argc, char** argv) {
     printf("Random generation: %c\n", game_conf.randomGeneration);
     printf("Field length X: %d\n", game_conf.fieldLengthX);
     printf("Field length Y: %d\n", game_conf.fieldLengthY);
-    if (game_conf.gameField == 'C') {
-        printf("Custom field path: %s\n", game_conf.customFieldPath);
-    }
-
     printf("IsConnected %d\n", sh_data->isConnected);
     printf("Snake direction %c\n", sh_data->snakeDirection);
 
-
-
     snake_position_t snakePosition;
-    initializeGameField(&sh_data->field, game_conf.fieldLengthX, game_conf.fieldLengthY, game_conf.randomGeneration);
+    if (sh_data->gameFieldPath == 0) {
+        initializeGameField(&sh_data->field, game_conf.fieldLengthX, game_conf.fieldLengthY, game_conf.randomGeneration);
+    }
     initializeSnakePosition(&snakePosition, game_conf.fieldLengthX/2, game_conf.fieldLengthY/2, game_conf.fieldLengthX, game_conf.fieldLengthY);
 
     update_field_th_data_t updateFieldData = {&sh_data->field, &snakePosition, &sh_data->updateGameFieldMutex, &sh_data->snakeDirection, &sh_data->isConnected, &sh_data->gameState, &sh_data->snakeLength};
@@ -75,12 +71,10 @@ int main(int argc, char** argv) {
     pthread_create(&threads[0], NULL, &updateGameFieldThread, &updateFieldData);
     pthread_create(&threads[1], NULL, &connectionStatusThread, &connectionStatusData);
 
-
     printf("SERVER BEZII \n");
 
     pthread_join(threads[0], NULL);
     pthread_join(threads[1], NULL);
-
 
     printf("SERVER KONCI \n");
 

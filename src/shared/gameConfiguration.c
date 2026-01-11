@@ -104,6 +104,7 @@ void fillGameConfiguration(game_conf_t* config) {
     char randomGeneration = 'N'; // 'Y' yes, 'N' no (if gameField == 'O')
     int fieldLengthX = 0;
     int fieldLengthY = 0;
+    int gameFieldPath = 0;
 
     // 1) game mode
     if (!read_char_choice("Select game mode : 'S' standard,  'T' time-limit\n", "ST", &gameMode)) {
@@ -156,35 +157,11 @@ void fillGameConfiguration(game_conf_t* config) {
 
         config->fieldLengthX = fieldLengthX;
         config->fieldLengthY = fieldLengthY;
-        config->customFieldPath = NULL; // important: no custom path in this mode
     } else {
-        char buf[256];
-
-        for (;;) {
-            printf("Enter custom field file path: ");
-            fflush(stdout);
-
-            if (!read_line(buf, sizeof buf)) {
-                fprintf(stderr, "Input ended.\n");
-                exit(1);
-            }
-            trim_newline(buf);
-
-            if (buf[0] == '\0') {
-                printf("Invalid input. Path cannot be empty.\n");
-                continue;
-            }
-
-            // allocate and copy
-            char *path = (char*)malloc(strlen(buf) + 1);
-            if (!path) {
-                perror("malloc");
-                exit(1);
-            }
-            strcpy(path, buf);
-
-            config->customFieldPath = path;
-            break;
+        if (!read_int_range("Enter custom field (1..3): ", 1, 3, &gameFieldPath)) {
+            fprintf(stderr, "Input ended.\n");
+            exit(1);
         }
+        config->customFieldPath = gameFieldPath;
     }
 }

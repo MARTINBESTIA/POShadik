@@ -10,6 +10,7 @@
 
 
 void initializeGameField(field_t *gameField, int lengthX, int lengthY, char randomGeneration) {
+
     gameField->fieldLengthX = lengthX;
     gameField->fieldLengthY = lengthY;
 
@@ -43,9 +44,14 @@ void destroyGameField(field_t *gameField) {
 
 void initializeSnakePosition(snake_position_t *snakePosition, int startX, int startY, int fieldLengthX, int fieldLengthY) {
     snakePosition->length = 1;
+    printf("Snake params: startX: %d, startY: %d, fieldLengthX: %d, fieldLengthY: %d\n", startX, startY, fieldLengthX, fieldLengthY);
     snakePosition->positions = (position_t *)malloc(fieldLengthY * fieldLengthX * sizeof(position_t)); // Max possible length
     snakePosition->positions[0].x = startX;
     snakePosition->positions[0].y = startY;
+    if (startX == 0 || startY == 0) {
+        snakePosition->positions[0].x = 0;
+        snakePosition->positions[0].y = 0;
+    }
     snakePosition->positions[0].typeOccupied = 'H'; // 'H' for head of the snake
 }
 

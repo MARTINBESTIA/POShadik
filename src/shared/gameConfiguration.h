@@ -12,7 +12,7 @@ typedef struct GameConfiguration {
     char randomGeneration; // 'Y' yes, 'N' no` if gameField is 'O'
     int fieldLengthX; // if gameField is Y
     int fieldLengthY; // if gameField is Y
-    char* customFieldPath; // if gameField is 'C'
+    int customFieldPath; // if gameField is 'C'
 } game_conf_t;
 
 void fillGameConfiguration(game_conf_t* config);

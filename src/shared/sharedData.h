@@ -31,9 +31,12 @@ typedef struct shared_data {
     time_t gameDuration;
     time_t gameStartTime;
     int snakeLength;
+    int gameFieldPath;
 } shared_data_t;
 
 void sharedDataInit(shared_data_t* data);
 void sharedDataDestroy(shared_data_t* data);
+
+void generateGameField(shared_data_t* data);
 
 #endif //SEMESTRALKA_CLIENTSERVERINTERFACE_H

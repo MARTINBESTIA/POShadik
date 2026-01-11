@@ -139,6 +139,12 @@ int main(void) {
                 shared_data_t *sh_data = (shared_data_t *) addr;
                 sh_data->gameDuration = (game_conf.gameMode == 'T') ? game_conf.timeLimit : -1;
                 sharedDataInit(sh_data);
+                if (game_conf.gameField == 'C') {
+                    sh_data->gameFieldPath = game_conf.customFieldPath;
+                    generateGameField(sh_data);
+                    game_conf.fieldLengthX = sh_data->field.fieldLengthX;
+                    game_conf.fieldLengthY = sh_data->field.fieldLengthY;
+                }
 
                 close(pipe_fd[read_end]);
                 if (write(pipe_fd[write_end], &game_conf, sizeof(game_conf_t)) < 0) {
@@ -213,7 +219,6 @@ int main(void) {
                 pthread_create(&threads[0], NULL, &timeClientUpdateThreadFunction, &updateTimeThreadData);
                 pthread_create(&threads[1], NULL, &inputThreadFunction, &inputThreadData);
                 pthread_create(&threads[2], NULL, &outputThreadFunction, &outputThreadData);
-
 
                 pthread_join(threads[0], NULL);
                 pthread_join(threads[1], NULL);
