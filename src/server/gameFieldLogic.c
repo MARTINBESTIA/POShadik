@@ -65,7 +65,7 @@ void spawnFruit(field_t *gameField) {
     gameField->positions[y][x].typeOccupied = 'F'; // 'F' for fruit
 }
 
-int moveSnake(field_t *gameField, snake_position_t *snakePosition, char direction) {
+int moveSnake(field_t *gameField, snake_position_t *snakePosition, char direction, int* snakeLengthPtr) {
     // Calculate new head position
     int newX = snakePosition->positions[0].x;
     int newY = snakePosition->positions[0].y;
@@ -108,6 +108,7 @@ int moveSnake(field_t *gameField, snake_position_t *snakePosition, char directio
         snakePosition->positions[snakePosition->length].y = lastY;
         gameField->positions[lastY][lastX].typeOccupied = 'H';
         snakePosition->length++;
+        (*snakeLengthPtr)++;
         spawnFruit(gameField);
     }
     // Check for collisions

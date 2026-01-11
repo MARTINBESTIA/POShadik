@@ -68,7 +68,7 @@ int main(int argc, char** argv) {
     initializeGameField(&sh_data->field, game_conf.fieldLengthX, game_conf.fieldLengthY, game_conf.randomGeneration);
     initializeSnakePosition(&snakePosition, game_conf.fieldLengthX/2, game_conf.fieldLengthY/2, game_conf.fieldLengthX, game_conf.fieldLengthY);
 
-    update_field_th_data_t updateFieldData = {&sh_data->field, &snakePosition, &sh_data->updateGameFieldMutex, &sh_data->snakeDirection, &sh_data->isConnected, &sh_data->gameState};
+    update_field_th_data_t updateFieldData = {&sh_data->field, &snakePosition, &sh_data->updateGameFieldMutex, &sh_data->snakeDirection, &sh_data->isConnected, &sh_data->gameState, &sh_data->snakeLength};
     connection_status_th_data_t connectionStatusData = {&sh_data->lastClientUpdateTime, &sh_data->clientUpdateMutex, &sh_data->isConnected, &sh_data->gameState, &sh_data->gameDuration, &sh_data->gameStartTime};
 
     pthread_t threads[2];

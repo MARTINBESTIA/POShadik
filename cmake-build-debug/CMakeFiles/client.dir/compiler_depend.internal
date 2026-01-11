@@ -3,10 +3,8 @@
 
 CMakeFiles/client.dir/src/client/clientMain.c.o
  /mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/client/clientMain.c
- /mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/shared/gameField.h
  /mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/server/gameFieldLogic.h
  /mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/shared/gameConfiguration.h
- /mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/shared/gameField.h
  /mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/shared/sharedData.h
  /mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/client/clientThreadsManager.h
  /mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/client/gameInitializer.h
@@ -117,9 +115,7 @@ CMakeFiles/client.dir/src/client/clientMain.c.o
 
 CMakeFiles/client.dir/src/client/clientSharedInterface.c.o
  /mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/client/clientSharedInterface.c
- /mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/shared/gameField.h
  /mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/server/gameFieldLogic.h
- /mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/shared/gameField.h
  /mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/shared/sharedData.h
  /mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/client/clientSharedInterface.h
  /mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/client/clientThreadsManager.h
@@ -202,9 +198,7 @@ CMakeFiles/client.dir/src/client/clientSharedInterface.c.o
 
 CMakeFiles/client.dir/src/client/clientThreadsManager.c.o
  /mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/client/clientThreadsManager.c
- /mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/shared/gameField.h
  /mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/server/gameFieldLogic.h
- /mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/shared/gameField.h
  /mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/shared/sharedData.h
  /mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/client/clientSharedInterface.h
  /mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/client/clientThreadsManager.h
@@ -287,10 +281,8 @@ CMakeFiles/client.dir/src/client/clientThreadsManager.c.o
 
 CMakeFiles/client.dir/src/client/gameInitializer.c.o
  /mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/client/gameInitializer.c
- /mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/shared/gameField.h
  /mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/server/gameFieldLogic.h
  /mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/shared/gameConfiguration.h
- /mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/shared/gameField.h
  /mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/shared/sharedData.h
  /mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/client/clientThreadsManager.h
  /mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/client/gameInitializer.h
@@ -460,9 +452,7 @@ CMakeFiles/client.dir/src/shared/gameConfiguration.c.o
 
 CMakeFiles/client.dir/src/shared/sharedData.c.o
  /mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/shared/sharedData.c
- /mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/shared/gameField.h
  /mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/server/gameFieldLogic.h
- /mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/shared/gameField.h
  /mnt/c/Users/marti/Desktop/škola/3. ročník/POS/semestralka/src/shared/sharedData.h
  /usr/include/alloca.h
  /usr/include/endian.h

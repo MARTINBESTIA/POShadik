@@ -153,7 +153,7 @@ int main(void) {
                     &sh_data->snakeDirectionMutex, &sh_data->snakeDirection, &sh_data->gameState
                 };
                 output_th_data_t outputThreadData = {
-                    &sh_data->updateGameFieldMutex, &sh_data->field, &sh_data->gameState
+                    &sh_data->updateGameFieldMutex, &sh_data->field, &sh_data->gameState, &sh_data->gameStartTime, &sh_data->snakeLength
                 };
                 time_update_th_data_t updateTimeThreadData = {
                     &sh_data->clientUpdateMutex, &sh_data->lastClientUpdateTime, &sh_data->gameState
@@ -169,6 +169,7 @@ int main(void) {
                 pthread_join(threads[0], NULL);
                 pthread_join(threads[1], NULL);
                 pthread_join(threads[2], NULL);
+                disable_raw_mode();
                 if (sh_data->gameState == 'P') serverExists = 1;
                 else serverExists = 0;
             } else {
@@ -201,7 +202,7 @@ int main(void) {
                     &sh_data->snakeDirectionMutex, &sh_data->snakeDirection, &sh_data->gameState
                 };
                 output_th_data_t outputThreadData = {
-                    &sh_data->updateGameFieldMutex, &sh_data->field, &sh_data->gameState, &sh_data->gameDuration
+                    &sh_data->updateGameFieldMutex, &sh_data->field, &sh_data->gameState, &sh_data->gameStartTime, &sh_data->snakeLength
                 };
                 time_update_th_data_t updateTimeThreadData = {
                     &sh_data->clientUpdateMutex, &sh_data->lastClientUpdateTime, &sh_data->gameState
@@ -217,6 +218,7 @@ int main(void) {
                 pthread_join(threads[0], NULL);
                 pthread_join(threads[1], NULL);
                 pthread_join(threads[2], NULL);
+                disable_raw_mode();
                 if (sh_data->gameState == 'P') serverExists = 1;
                 else serverExists = 0;
             }

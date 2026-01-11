@@ -30,6 +30,7 @@ typedef struct shared_data {
     time_t lastClientUpdateTime;
     time_t gameDuration;
     time_t gameStartTime;
+    int snakeLength;
 } shared_data_t;
 
 void sharedDataInit(shared_data_t* data);

@@ -48,7 +48,9 @@ void *outputThreadFunction(void *arg) {
             }
             printf("\n");
         }
-        //printf("%d.2 ", data->gameDurationPtr);
+        double elapsed = difftime(time(NULL), *data->gameStartTimePtr);
+        printf("Time: %.2f\n", elapsed);
+        printf("Snake length: %d\n", *data->snakeLengthPtr);
         pthread_mutex_unlock(data->updateGameFieldMutexPtr);
         usleep(100000); // Sleep for 100ms
     }

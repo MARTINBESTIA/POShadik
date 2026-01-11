@@ -13,7 +13,7 @@ void* updateGameFieldThread(void* data) {
             continue;
         }
         pthread_mutex_lock(threadData->updateGameFieldMutexPtr);
-        int alive = moveSnake(threadData->fieldPtr, threadData->snakePtr, *(threadData->snakeDirectionPtr));
+        int alive = moveSnake(threadData->fieldPtr, threadData->snakePtr, *(threadData->snakeDirectionPtr), threadData->snakeLengthPtr);
         if (alive == -1) {
             printf("Collision detected! Game Over.\n");
             *(threadData->isConnectedPtr) = 0; // For example, disconnect client

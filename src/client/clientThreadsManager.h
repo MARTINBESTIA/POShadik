@@ -20,7 +20,8 @@ typedef struct OutputThreadData {
     pthread_mutex_t* updateGameFieldMutexPtr;
     field_t* fieldPtr;
     char* gameStatePtr;
-    time_t* gameDurationPtr;
+    time_t* gameStartTimePtr;
+    int* snakeLengthPtr;
 } output_th_data_t;
 
 typedef struct TimeClientUpdateThreadData {

@@ -25,7 +25,7 @@ typedef struct field {
 } field_t;
 
 void spawnFruit(field_t *gameField);
-int moveSnake(field_t *gameField, snake_position_t *snakePosition, char direction);
+int moveSnake(field_t *gameField, snake_position_t *snakePosition, char direction, int* snakeLengthPtr);
 int checkCollision(field_t *gameField, snake_position_t *snakePosition);
 
 void initializeGameField(field_t *gameField, int lengthX, int lengthY, char randomGeneration);

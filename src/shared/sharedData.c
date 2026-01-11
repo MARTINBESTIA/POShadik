@@ -25,6 +25,7 @@ void sharedDataInit(shared_data_t* data) {
     data->gameState = 'R'; // running
     data->lastClientUpdateTime = time(NULL);
     data->gameStartTime = time(NULL);
+    data->snakeLength = 1;
 }
 
 void sharedDataDestroy(shared_data_t* data) {

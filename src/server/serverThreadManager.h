@@ -16,6 +16,7 @@ typedef struct UpdateGameFieldThreadData {
     char* snakeDirectionPtr;
     int* isConnectedPtr;
     char* gameStatePtr;
+    int* snakeLengthPtr;
 } update_field_th_data_t;
 
 typedef struct ConnectionStatusThreadData {
